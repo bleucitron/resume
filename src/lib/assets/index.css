@@ -1,0 +1,11 @@
+@import '@fontsource/dm-serif-display';
+
+body {
+	font-family: 'DM Serif Display', Georgia, serif;
+}
+
+h1 {
+	width: 8ch;
+	font-size: 3rem;
+	line-height: 0.66;
+}

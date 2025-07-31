@@ -1,0 +1,216 @@
+{
+	"personal_info": {
+		"name": "Romain Crestey",
+		"birth_date": "1985-12-31T00:00:00.000Z",
+		"email": "rcrestey@gmail.com",
+		"address": "80 rue Faugères",
+		"zip_code": 33130,
+		"city": "Bègles",
+		"phone_number": "+33 (0)6 43 50 56 43",
+		"github": "bleucitron"
+	},
+	"experiences": [
+		{
+			"company": {
+				"name": "Radiofrance",
+				"website": "www.radiofrance.fr"
+			},
+			"title": "Développeur web full-stack senior",
+			"summary": "Développement de la plateforme web unifiée de Radiofrance",
+			"tasks": [
+				"Leadership technique, participation aux recrutements",
+				"Optimisation des chargements de données",
+				"Simplification de l'architecture globale Backend-For-Frontend de la plateforme",
+				"Développement de l'expérience interactive \"Ma Saison Radio\"",
+				"Mise en place de stratégies pour nettoyer 900+ erreurs TypeScript",
+				"Rénovation du système de tracking côté client",
+				"Tests unitaires et e2e",
+				"Mise en place d'un système de mocks pour les tests e2e",
+				"Maintenance et optimisation de la pipeline"
+			],
+			"stack": [
+				"Svelte",
+				"SvelteKit",
+				"TypeScript",
+				"Node",
+				"GraphQL",
+				"Vitest",
+				"Playwright",
+				"Gitlab CI"
+			],
+			"from": "2023-01",
+			"to": "2025-12"
+		},
+		{
+			"title": "Formateur en développement web",
+			"description": "Animation de sessions de formation sur JavaScript, React, Svelte, SvelteKit, Algorithmes et structures de données, en Formation Initiale ou Formation Continue",
+			"projects": [
+				{
+					"description": "Animation de cours de M1 et M2, XXX heures, XXX élèves",
+					"client": "ECV Digital"
+				},
+				{
+					"description": "Animation de sessions de Formation Continue, XXX heures, XXX élèves",
+					"client": "Human Coders"
+				}
+			]
+		},
+		{
+			"company": {
+				"name": "MesAidesPubliques",
+				"website": "www.mesaidespubliques.infogreffe.fr"
+			},
+			"title": "Développeur web front-end senior",
+			"summary": "Développement d'une plateforme de mise en relation orientée financements publics",
+			"tasks": [
+				"Leadership technique",
+				"Optimisation des chargements de données",
+				"Migration de Sapper vers SvelteKit"
+			],
+			"stack": ["Svelte", "SvelteKit", "TypeScript", "Node", "Vitest", "Cypress"],
+			"from": "2020-10",
+			"to": "2022-11"
+		},
+		{
+			"company": {
+				"name": "NaturalPad",
+				"website": "www.naturalpad.fr"
+			},
+			"title": "Développeur web senior",
+			"summary": "Responsable des développements web",
+			"tasks": [
+				"Maintenance de la plateforme de jeux thérapeutiques Medimoov",
+				"Développement d'un POC pour la version 2 de Medimoov",
+				"Développement de divers sites d'informations sur la santé pour l'ARS Île-de-France et la MACIF",
+				"Développement d'outils internes",
+				"https://mon-fibrome.fr",
+				"https://bienetre.naturalpad.fr",
+				"https://garder-lequilibre.fr"
+			],
+			"stack": ["Svelte", "SvelteKit", "TypeScript", "Node", "Vitest", "Cypress"],
+			"from": "2019-06",
+			"to": "2020-07"
+		},
+		{
+			"title": "Développeur web indépendant",
+			"summary": "Développement d'applications pour divers clients",
+			"from": "2017-01",
+			"to": "2019-06",
+			"projects": [
+				{
+					"description": "Application mobile de recettes",
+					"client": "Magimix",
+					"duration": {
+						"months": 5
+					},
+					"stack": ["Haxe", "React"]
+				},
+				{
+					"description": "Application mobile de boutique en ligne",
+					"client": "Magimix",
+					"duration": {
+						"months": 3
+					},
+					"stack": ["Haxe", "React"]
+				},
+				{
+					"description": "Plateforme de streaming vidéo pour téléviseur",
+					"client": "Telecine",
+					"duration": {
+						"months": 5
+					},
+					"stack": ["Haxe", "React"]
+				},
+				{
+					"description": "Extension navigateur d'assistance aux achats",
+					"client": "Le Même en mieux",
+					"duration": {
+						"weeks": 3
+					},
+					"stack": ["React"]
+				},
+				{
+					"description": "Boutique en ligne de groupements d'agriculteurs",
+					"client": "Alilo",
+					"duration": {
+						"weeks": 1
+					},
+					"stack": ["React"]
+				}
+			]
+		},
+		{
+			"company": {
+				"name": "Ants"
+			},
+			"title": "Développeur associé",
+			"summary": "Conseil en innovation et data orienté bien commun",
+			"projects": null,
+			"stack": ["React", "JavaScript", "TypeScript", "Node", "ThreeJS", "Python", "PostGreSQL"],
+			"from": "2015-01",
+			"to": "2016-11"
+		},
+		{
+			"company": {
+				"name": "Ingéliance"
+			},
+			"title": "Ingénieur en Calcul de Structures",
+			"from": "2010-09",
+			"to": "2014-05"
+		}
+	],
+	"languages": [
+		{
+			"name": "french",
+			"level": "native"
+		},
+		{
+			"name": "english",
+			"level": "fluent"
+		},
+		{
+			"name": "spanish",
+			"level": "fluent"
+		}
+	],
+	"fun": [
+		"Traduction de la documentation de Svelte et SvelteKit",
+		"Advent Of Code 2020 (Rust, 50*), 2022 (TypeScript, 50*), 2023 (Lua, 43*)",
+		"Pas assez d'étagères pour toutes mes BDs",
+		"Chercheur de Korogus à la nuit tombée",
+		"Danseur de Lindy Hop occasionnel",
+		"Gribouille de temps en temps",
+		"Gratouille de temps à autre"
+	],
+	"education": [
+		{
+			"title": "Mastère spécialisé \"Structures aéronautiques et spatiales\"",
+			"school": "ISAE",
+			"location": "Toulouse",
+			"from": "2009-09",
+			"to": "2010-08"
+		},
+		{
+			"title": "Diplôme d'ingénieur généraliste",
+			"description": "Cursus Erasmus à Madrid",
+			"school": "École Centrale Méditerrannée",
+			"location": "Marseille",
+			"from": "2004-09",
+			"to": "2008-06"
+		},
+		{
+			"title": "Classes préparatoires MPSI/MP",
+			"school": "Lycée Pierre de Fermat",
+			"location": "Toulouse",
+			"from": "2002-09",
+			"to": "2004-06"
+		},
+		{
+			"title": "Baccalauréat Scientifique",
+			"school": "Lycée Ozenne",
+			"location": "Toulouse",
+			"from": "1999-09",
+			"to": "2002-06"
+		}
+	]
+}

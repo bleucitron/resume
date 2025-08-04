@@ -1,11 +1,49 @@
 @import '@fontsource/dm-serif-display';
+@import '@fontsource/geist-mono/400';
+@import '@fontsource/geist-mono/600';
+
+html {
+	/* background: grey; */
+	box-sizing: border-box;
+}
 
 body {
+	display: flex;
+	flex-flow: column;
+	gap: 3rem;
+	width: 100ch;
+	height: 100vh;
+	margin: auto;
+	padding: 2rem 10ch;
+	font-family: 'DM Serif Display', Georgia, serif;
+
+	/* background: lightgrey; */
+	/* outline: 1px dashed orange; */
+
+	@media print {
+		width: 21cm;
+	}
+}
+
+header,
+main,
+footer {
+	background: white;
+}
+
+h2,
+h3 {
 	font-family: 'DM Serif Display', Georgia, serif;
 }
 
-h1 {
+h2 {
 	width: 8ch;
 	font-size: 3rem;
 	line-height: 0.66;
+	margin-block: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+p {
+	font-family: 'Geist Mono';
 }

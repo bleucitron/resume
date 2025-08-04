@@ -14,7 +14,8 @@
 		"lint": "prettier --check . && eslint ."
 	},
 	"dependencies": {
-		"@fontsource/dm-serif-display": "^5.2.6"
+		"@fontsource/dm-serif-display": "^5.2.6",
+		"@fontsource/geist-mono": "^5.2.6"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

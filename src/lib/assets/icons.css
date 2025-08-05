@@ -1,0 +1,44 @@
+.nf-md-nodejs {
+	color: #83ce27;
+}
+
+.nf-dev-svelte {
+	color: #ff3e00;
+}
+
+.nf-dev-typescript {
+	color: #3078c6;
+}
+
+.nf-dev-javascript {
+	color: #f7e01c;
+}
+
+.nf-dev-graphql {
+	color: #e534ab;
+}
+
+.nf-dev-react {
+	color: #5edcfb;
+}
+
+.nf-seti-haxe,
+.nf-dev-haxe {
+	color: #f68710;
+}
+
+.nf-dev-postgresql {
+	color: #316193;
+}
+
+.nf-dev-python {
+	color: #3274a5;
+}
+
+.nf-dev-cypressio {
+	color: #5cd1a0;
+}
+
+.nf-dev-nextjs {
+	color: #000000;
+}

@@ -1,6 +1,9 @@
 @import '@fontsource/dm-serif-display';
 @import '@fontsource/geist-mono/400';
 @import '@fontsource/geist-mono/600';
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+@import 'icons.css';
 
 :root {
 	--green: mediumseagreen;
@@ -52,7 +55,7 @@ h2 {
 }
 
 p {
-	font-family: 'Geist Mono';
+	font-family: Geist Mono;
 }
 
 .weak {

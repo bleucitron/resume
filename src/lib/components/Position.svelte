@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { Company, Project } from '$lib/types';
+
+	import { iconByLang, type Lang } from '$lib/icons';
 	import Period from './Period.svelte';
 
 	type Props = {
@@ -10,9 +12,10 @@
 		to?: string;
 		tasks?: string[];
 		projects?: Project[];
+		stack?: Lang[];
 	};
 
-	const { title, description, company, from, to, tasks, projects }: Props = $props();
+	const { title, description, company, from, to, tasks, projects, stack = [] }: Props = $props();
 	$inspect(to);
 </script>
 
@@ -24,7 +27,16 @@
 		</h4>
 		<Period {from} {to} />
 	</header>
-	{#if description}<p class="description">{description}</p>{/if}
+	{#if description}<div class="description">
+			<p>{description}</p>
+
+			<div class="stack">
+				{#each stack as icon (icon)}
+					<i class="nf {iconByLang[icon]}"></i>
+				{/each}
+			</div>
+		</div>
+	{/if}
 
 	{#if tasks?.length}
 		<ul class="tasks">
@@ -35,7 +47,12 @@
 	{:else if projects?.length}
 		<ul class="tasks">
 			{#each projects as { description, client }}
-				<li>{description} pour <a href={client.website}>{client.name}</a></li>
+				<li>
+					{description}
+					{#if client}pour
+						<a href={client.website} target="_blank" rel="noopener noreferrer">{client.name}</a
+						>{/if}
+				</li>
 			{/each}
 		</ul>
 	{/if}
@@ -78,11 +95,13 @@
 	}
 
 	.description {
+		display: flex;
+		justify-content: space-between;
 		margin-block: 0.1rem;
 		font-size: 0.9rem;
 		color: black;
 
-		&::before {
+		p::before {
 			content: '❯';
 			color: var(--green);
 			/* color: black; */
@@ -96,5 +115,10 @@
 		margin: 0;
 		font-size: 0.9rem;
 		list-style-type: circle;
+	}
+
+	.stack {
+		display: flex;
+		gap: 0.5rem;
 	}
 </style>

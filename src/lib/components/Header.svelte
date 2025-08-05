@@ -27,7 +27,7 @@
 	}
 
 	h1 {
-		font-family: 'Geist Mono';
+		font-family: Geist Mono;
 		font-size: 1.7rem;
 		font-weight: normal;
 		margin: 0;

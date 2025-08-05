@@ -20,18 +20,18 @@
 </script>
 
 {#if fromDate && toDate}
-	<time
+	<time class="Period"
 		><span class="weak">de</span>
 		{fromDate.year} <span class="weak">à</span>
 		{toDate.year}<span class="weak">,</span>
 		{formattedDuration}</time
 	>
 {:else if fromDate}
-	<time><span class="weak">depuis</span> {fromDate.year}</time>
+	<time class="Period"><span class="weak">depuis</span> {fromDate.year}</time>
 {/if}
 
 <style>
-	time {
+	.Period {
 		color: darkorange;
 		font-size: 0.9rem;
 		text-align: right;

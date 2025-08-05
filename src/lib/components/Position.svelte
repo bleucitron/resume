@@ -1,8 +1,9 @@
 <script lang="ts">
 	import type { Company, Project } from '$lib/types';
 
-	import { iconByLang, type Lang } from '$lib/icons';
+	import { type Lang } from '$lib/icons';
 	import Period from './Period.svelte';
+	import Stack from './Stack.svelte';
 
 	type Props = {
 		title: string;
@@ -19,7 +20,7 @@
 	$inspect(to);
 </script>
 
-<article>
+<article class="Position">
 	<header>
 		<h4>
 			<span>{title}</span>
@@ -29,12 +30,7 @@
 	</header>
 	{#if description}<div class="description">
 			<p>{description}</p>
-
-			<div class="stack">
-				{#each stack as icon (icon)}
-					<i class="nf {iconByLang[icon]}"></i>
-				{/each}
-			</div>
+			<Stack {stack} />
 		</div>
 	{/if}
 
@@ -59,66 +55,61 @@
 </article>
 
 <style>
-	article {
+	.Position {
 		color: hsl(0 0 60%);
 		font-family: Geist Mono;
 		margin-block: 1rem;
-	}
 
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-	}
-
-	h4 {
-		color: black;
-		/* span:first-child { */
-		/* 	color: white; */
-		/* 	background: hsl(0 0 30%); */
-		/* } */
-	}
-
-	h4,
-	p {
-		margin: 0;
-	}
-
-	a {
-		color: var(--green);
-		transition: all 0.2s ease-in-out;
-
-		&:hover {
-			color: white;
-			background: var(--green);
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
 		}
-	}
 
-	.description {
-		display: flex;
-		justify-content: space-between;
-		margin-block: 0.1rem;
-		font-size: 0.9rem;
-		color: black;
+		h4 {
+			color: black;
+			/* span:first-child { */
+			/* 	color: white; */
+			/* 	background: hsl(0 0 30%); */
+			/* } */
+		}
 
-		p::before {
-			content: '❯';
+		h4,
+		p {
+			margin: 0;
+		}
+
+		a {
 			color: var(--green);
-			/* color: black; */
-			margin-right: 0.5rem;
-			position: relative;
-			bottom: 0.09rem;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				color: white;
+				background: var(--green);
+			}
 		}
-	}
 
-	.tasks {
-		margin: 0;
-		font-size: 0.9rem;
-		list-style-type: circle;
-	}
+		.description {
+			display: flex;
+			justify-content: space-between;
+			margin-block: 0.1rem;
+			font-size: 0.9rem;
+			color: black;
 
-	.stack {
-		display: flex;
-		gap: 0.5rem;
+			p::before {
+				content: '❯';
+				color: var(--green);
+				/* color: black; */
+				margin-right: 0.5rem;
+				position: relative;
+				bottom: 0.09rem;
+			}
+		}
+
+		.tasks {
+			margin: 0;
+			font-size: 0.9rem;
+			list-style-type: circle;
+		}
 	}
 </style>

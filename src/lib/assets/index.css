@@ -2,16 +2,19 @@
 @import '@fontsource/geist-mono/400';
 @import '@fontsource/geist-mono/600';
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	/* background: grey; */
-	box-sizing: border-box;
 }
 
 body {
 	display: flex;
 	flex-flow: column;
-	gap: 3rem;
-	width: 100ch;
+	gap: 2rem;
+	width: 120ch;
 	height: 100vh;
 	margin: auto;
 	padding: 2rem 10ch;

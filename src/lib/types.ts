@@ -1,4 +1,9 @@
 export type Company = {
 	name: string;
-	website: string;
+	website?: string;
+};
+
+export type Project = {
+	description: string;
+	client?: Company[];
 };

@@ -15,7 +15,8 @@
 	},
 	"dependencies": {
 		"@fontsource/dm-serif-display": "^5.2.6",
-		"@fontsource/geist-mono": "^5.2.6"
+		"@fontsource/geist-mono": "^5.2.6",
+		"luxon": "^3.7.1"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -23,6 +24,7 @@
 		"@sveltejs/adapter-auto": "^6.0.0",
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
+		"@types/luxon": "^3.7.1",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",

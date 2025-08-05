@@ -2,12 +2,16 @@
 @import '@fontsource/geist-mono/400';
 @import '@fontsource/geist-mono/600';
 
+:root {
+	--green: mediumseagreen;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 html {
-	/* background: grey; */
+	/* background: lightgrey; */
 }
 
 body {
@@ -52,5 +56,10 @@ p {
 }
 
 .weak {
-	color: hsl(0 0 80%);
+	color: hsl(0 0 60%);
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
 }

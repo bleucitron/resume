@@ -50,3 +50,7 @@ h2 {
 p {
 	font-family: 'Geist Mono';
 }
+
+.weak {
+	color: hsl(0 0 80%);
+}

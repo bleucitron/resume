@@ -1,6 +1,6 @@
 {
 	"title": "Développeur Web Senior",
-	"description": "Expert TypeScript / Svelte / NodeJS\nAnglais et Espagnol courant\nAime le cheesecake",
+	"description": "Expert TypeScript / Svelte / nodejsJS\nAnglais et Espagnol courant\nAime le cheesecake",
 	"personal_info": {
 		"name": "Romain Crestey",
 		"birth_date": "1985-12-31T00:00:00.000Z",
@@ -15,7 +15,7 @@
 		{
 			"company": {
 				"name": "Radiofrance",
-				"website": "www.radiofrance.fr"
+				"website": "https://www.radiofrance.fr"
 			},
 			"title": "Développeur web full-stack senior",
 			"description": "Développement de la plateforme web unifiée de Radiofrance",
@@ -30,53 +30,46 @@
 				"Mise en place d'un système de mocks pour les tests e2e",
 				"Maintenance et optimisation de la pipeline"
 			],
-			"stack": [
-				"Svelte",
-				"SvelteKit",
-				"TypeScript",
-				"Node",
-				"GraphQL",
-				"Vitest",
-				"Playwright",
-				"Gitlab CI"
-			],
+			"stack": ["svelte", "sveltekit", "typescript", "nodejs", "graphql", "vitest", "playwright"],
 			"from": "2023-01",
 			"to": "2025-12"
 		},
 		{
 			"title": "Formateur en développement web",
-			"description": "Animation de sessions de formation sur JavaScript, React, Svelte, SvelteKit, Algorithmes et structures de données, en Formation Initiale ou Formation Continue",
+			"description": "Animation de formations sur JavaScript, React, Svelte, SvelteKit, Algorithmes",
+			"stack": ["svelte", "sveltekit", "react", "typescript", "javascript", "nodejs"],
 			"projects": [
 				{
 					"description": "Animation de cours de M1 et M2, XXX heures, XXX élèves",
-					"client": "ECV Digital"
+					"client": { "name": "ECV Digital", "website": "https://www.ecv.fr/digital" }
 				},
 				{
 					"description": "Animation de sessions de Formation Continue, XXX heures, XXX élèves",
-					"client": "Human Coders"
+					"client": { "name": "Human Coders", "website": "https://www.humancoders.com" }
 				}
-			]
+			],
+			"from": "2017-01"
 		},
 		{
 			"company": {
-				"name": "MesAidesPubliques",
-				"website": "www.mesaidespubliques.infogreffe.fr"
+				"name": "MAPi",
+				"website": "https://www.mesaidespubliques.infogreffe.fr"
 			},
 			"title": "Développeur web front-end senior",
-			"description": "Développement d'une plateforme de mise en relation orientée financements publics",
+			"description": "Développement d'une plateforme d'aide au financement public",
 			"tasks": [
 				"Leadership technique",
 				"Optimisation des chargements de données",
 				"Migration de Sapper vers SvelteKit"
 			],
-			"stack": ["Svelte", "SvelteKit", "TypeScript", "Node", "Vitest", "Cypress"],
+			"stack": ["svelte", "sveltekit", "typescript", "nodejs", "vitest", "cypress"],
 			"from": "2020-10",
 			"to": "2022-11"
 		},
 		{
 			"company": {
 				"name": "NaturalPad",
-				"website": "www.naturalpad.fr"
+				"website": "https://www.naturalpad.fr"
 			},
 			"title": "Développeur web senior",
 			"description": "Responsable des développements web",
@@ -89,55 +82,67 @@
 				"https://bienetre.naturalpad.fr",
 				"https://garder-lequilibre.fr"
 			],
-			"stack": ["Svelte", "SvelteKit", "TypeScript", "Node", "Vitest", "Cypress"],
+			"stack": ["react", "nextjs", "typescript", "nodejs", "vitest"],
 			"from": "2019-06",
 			"to": "2020-07"
 		},
 		{
-			"title": "Développeur web indépendant",
-			"description": "Développement d'applications pour divers clients",
+			"title": "Développeur indépendant",
+			"description": "Développement d'applications web et mobile pour divers clients",
 			"from": "2017-01",
 			"to": "2019-06",
+			"stack": ["haxe", "react", "javascript"],
 			"projects": [
 				{
-					"description": "Application mobile de recettes",
-					"client": "Magimix",
+					"description": "Plateforme de streaming vidéo pour téléviseur",
+					"client": { "name": "Telecine", "website": "https://www.telecine.com.br" },
 					"duration": {
 						"months": 5
 					},
-					"stack": ["Haxe", "React"]
+					"stack": ["haxe", "react"]
+				},
+				{
+					"description": "Plateforme interne de gestion immobilière",
+					"client": { "name": "Nexity", "website": "https://www.nexity.fr" },
+					"duration": {
+						"months": 5
+					},
+					"stack": ["react", "typescript"]
+				},
+				{
+					"description": "Application mobile de recettes",
+					"client": { "name": "Magimix", "website": "https://www.magimix.fr" },
+					"duration": {
+						"months": 5
+					},
+					"stack": ["haxe", "react"]
 				},
 				{
 					"description": "Application mobile de boutique en ligne",
-					"client": "Magimix",
+					"client": { "name": "Veditech", "website": "https://www.veditec.net" },
 					"duration": {
 						"months": 3
 					},
-					"stack": ["Haxe", "React"]
-				},
-				{
-					"description": "Plateforme de streaming vidéo pour téléviseur",
-					"client": "Telecine",
-					"duration": {
-						"months": 5
-					},
-					"stack": ["Haxe", "React"]
+					"stack": ["haxe", "react"]
 				},
 				{
 					"description": "Extension navigateur d'assistance aux achats",
-					"client": "Le Même en mieux",
+					"client": {
+						"name": "Le Même en mieux",
+						"website": "https://www.lmem.net"
+					},
 					"duration": {
 						"weeks": 3
 					},
-					"stack": ["React"]
+					"stack": ["react"]
 				},
 				{
 					"description": "Boutique en ligne de groupements d'agriculteurs",
-					"client": "Alilo",
+					"client": { "name": "Cagette.net", "website": "https://www.cagette.net" },
 					"duration": {
 						"weeks": 1
 					},
-					"stack": ["React"]
+					"stack": ["react"]
 				}
 			]
 		},
@@ -148,13 +153,14 @@
 			"title": "Développeur associé",
 			"description": "Conseil en innovation et data orienté bien commun",
 			"projects": null,
-			"stack": ["React", "JavaScript", "TypeScript", "Node", "ThreeJS", "Python", "PostGreSQL"],
+			"stack": ["react", "javascript", "typescript", "nodejs", "threejs", "python", "postgresql"],
 			"from": "2015-01",
 			"to": "2016-11"
 		},
 		{
 			"company": {
-				"name": "Ingéliance"
+				"name": "Ingéliance",
+				"website": "https://ingeliance.com/"
 			},
 			"title": "Ingénieur en Calcul de Structures",
 			"from": "2010-09",

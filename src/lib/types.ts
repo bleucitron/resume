@@ -7,6 +7,6 @@ export type Company = {
 
 export type Project = {
 	description: string;
-	client?: Company[];
+	client?: Company;
 	duration?: DurationObjectUnits;
 };

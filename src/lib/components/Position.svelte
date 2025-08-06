@@ -58,7 +58,7 @@
 <style>
 	.Position {
 		color: hsl(0 0 60%);
-		font-family: Geist Mono;
+		font-family: var(--code-font);
 		margin-block: 1rem;
 
 		header {

@@ -1,12 +1,15 @@
 @import '@fontsource/dm-serif-display';
-@import '@fontsource/geist-mono/400';
-@import '@fontsource/geist-mono/600';
+@import '@fontsource/commit-mono';
+@import '@fontsource/jetbrains-mono';
 @import 'https://www.nerdfonts.com/assets/css/webfont.css';
 
 @import 'icons.css';
 
 :root {
 	--green: mediumseagreen;
+	/* --code-font: Commit Mono, monospace; */
+	--code-font: JetBrains Mono, monospace;
+	--title-font: DM Serif Display, Georgia, serif;
 }
 
 * {
@@ -25,7 +28,7 @@ body {
 	height: 100vh;
 	margin: auto;
 	padding: 2rem 10ch;
-	font-family: 'DM Serif Display', Georgia, serif;
+	font-family: var(--title-font);
 
 	/* background: lightgrey; */
 	/* outline: 1px dashed orange; */
@@ -41,11 +44,6 @@ footer {
 	background: white;
 }
 
-h2,
-h3 {
-	font-family: 'DM Serif Display', Georgia, serif;
-}
-
 h2 {
 	width: 8ch;
 	font-size: 3rem;
@@ -55,7 +53,7 @@ h2 {
 }
 
 p {
-	font-family: Geist Mono;
+	font-family: var(--code-font);
 }
 
 .weak {

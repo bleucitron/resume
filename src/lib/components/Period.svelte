@@ -1,34 +1,42 @@
 <script lang="ts">
-	import { DateTime, Duration } from 'luxon';
+	import { DateTime, Duration, type DurationObjectUnits } from 'luxon';
 
 	type Props = {
-		from: string;
+		from?: string;
 		to?: string;
+		duration?: DurationObjectUnits;
 	};
 
-	const { from, to }: Props = $props();
+	const { from, to, duration }: Props = $props();
 
-	const fromDate = DateTime.fromISO(from, { locale: 'fr' });
-	const toDate = to ? DateTime.fromISO(to, { locale: 'fr' }) : undefined;
-	const duration = (toDate ?? DateTime.now()).diff(fromDate, ['years', 'months']).toObject();
+	const fromDate = $derived(from ? DateTime.fromISO(from, { locale: 'fr' }) : undefined);
+	const toDate = $derived(to ? DateTime.fromISO(to, { locale: 'fr' }) : undefined);
 
-	const formattedDuration = Duration.fromObject(duration)
-		.reconfigure({ locale: 'fr' })
-		.toHuman({ listStyle: 'short' });
+	const _duration = $derived(
+		duration ??
+			(fromDate && (toDate ?? DateTime.now()).diff(fromDate, ['years', 'months']).toObject()),
+	);
+
+	const formattedDuration = $derived(
+		_duration &&
+			Duration.fromObject(_duration).reconfigure({ locale: 'fr' }).toHuman({ listStyle: 'short' }),
+	);
 	// const formattedDuration = new Intl.DurationFormat('fr-FR', { style: 'long' }).format(duration);
 	$inspect(formattedDuration);
 </script>
 
-{#if fromDate && toDate}
-	<time class="Period"
-		><span class="weak">de</span>
+<time class="Period">
+	{#if fromDate && toDate}
+		<span class="weak">de</span>
 		{fromDate.year} <span class="weak">à</span>
 		{toDate.year}<span class="weak">,</span>
-		{formattedDuration}</time
-	>
-{:else if fromDate}
-	<time class="Period"><span class="weak">depuis</span> {fromDate.year}</time>
-{/if}
+		{formattedDuration}
+	{:else if fromDate}
+		<span class="weak">depuis</span> {fromDate.year}
+	{:else if duration}
+		{formattedDuration}
+	{/if}
+</time>
 
 <style>
 	.Period {

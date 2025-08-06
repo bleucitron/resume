@@ -42,12 +42,13 @@
 		</ul>
 	{:else if projects?.length}
 		<ul class="tasks">
-			{#each projects as { description, client }}
+			{#each projects as { description, client, duration }}
 				<li>
 					{description}
 					{#if client}pour
 						<a href={client.website} target="_blank" rel="noopener noreferrer">{client.name}</a
 						>{/if}
+					<Period {duration} />
 				</li>
 			{/each}
 		</ul>

@@ -52,7 +52,6 @@
 	}
 
 	.hobbies {
-		font-family: var(--code-font);
 		list-style-type: hiragana-iroha;
 		padding-left: 2rem;
 	}

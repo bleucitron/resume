@@ -57,7 +57,6 @@
 <style>
 	.Position {
 		color: var(--grey);
-		font-family: var(--code-font);
 		margin-block: 1rem;
 
 		header {

@@ -31,7 +31,7 @@ body {
 	height: 100vh;
 	margin: auto;
 	padding: 2rem 10ch;
-	font-family: var(--title-font);
+	font-family: var(--code-font);
 
 	/* background: lightgrey; */
 	/* outline: 1px dashed orange; */
@@ -55,8 +55,9 @@ h2 {
 	margin-right: 0.5rem;
 }
 
-p {
-	font-family: var(--code-font);
+h2,
+h3 {
+	font-family: var(--title-font);
 }
 
 .weak {

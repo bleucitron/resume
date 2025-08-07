@@ -27,7 +27,6 @@
 	}
 
 	h1 {
-		font-family: var(--code-font);
 		font-size: 1.7rem;
 		font-weight: normal;
 		margin: 0;

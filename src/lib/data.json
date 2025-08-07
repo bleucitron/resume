@@ -181,9 +181,11 @@
 				"name": "Ingéliance",
 				"website": "https://ingeliance.com/"
 			},
+			"description": "Une autre vie...",
 			"title": "Ingénieur en Calcul de Structures",
 			"from": "2010-09",
-			"to": "2014-05"
+			"to": "2014-05",
+			"stack": ["plane"]
 		}
 	],
 	"languages": [

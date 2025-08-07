@@ -64,3 +64,7 @@
 .nf-dev-git {
 	color: #f05133;
 }
+
+.nf-fa-plane {
+	color: hsl(0 0 80%);
+}

@@ -18,6 +18,7 @@ export const langById = {
 	lua: { name: 'Lua', icon: 'nf-dev-lua' },
 	neovim: { name: 'Neovim', icon: 'nf-linux-neovim' },
 	git: { name: 'Git', icon: 'nf-dev-git' },
+	plane: { name: 'Aéronautique', icon: 'nf-fa-plane' },
 } as const;
 
 export type LangId = keyof typeof langById;

@@ -111,5 +111,13 @@
 			font-size: 0.9rem;
 			list-style-type: circle;
 		}
+
+		&:last-child {
+			.description p {
+				background-image: linear-gradient(90deg, black, white);
+				color: transparent;
+				background-clip: text;
+			}
+		}
 	}
 </style>

@@ -152,7 +152,6 @@
 			},
 			"title": "Développeur associé",
 			"description": "Conseil en innovation et data orienté bien commun",
-			"projects": null,
 			"stack": ["react", "javascript", "typescript", "nodejs", "threejs", "python", "postgresql"],
 			"from": "2015-01",
 			"to": "2016-11"

@@ -1,6 +1,6 @@
 {
 	"title": "Développeur Web Senior",
-	"description": "Anglais et Espagnol courant\nAime le cheesecake",
+	"description": ["anglais et espagnol courants", "aime le cheesecake"],
 	"personal_info": {
 		"name": "Romain Crestey",
 		"birth_date": "1985-12-31T00:00:00.000Z",
@@ -225,7 +225,7 @@
 			"title": "Diplôme d'ingénieur généraliste",
 			"school": "École Centrale Méditerrannée",
 			"location": "Marseille",
-			"info": "dont 2 ans de cursus Erasmus à l'ETSII, Madrid",
+			"info": "dont 2 ans de cursus Erasmus à l'ETSII (Madrid)",
 			"from": "2004-09",
 			"to": "2009-06"
 		},

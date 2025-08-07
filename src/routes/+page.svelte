@@ -10,12 +10,14 @@
 
 	const { title, description, personal_info, stack, positions, hobbies, aoc, education } =
 		$derived(data);
+	const { name, birth_date } = $derived(personal_info);
+
 	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
 
 	$inspect(data);
 </script>
 
-<Header name={personal_info.name} {title} {description} />
+<Header {name} {birth_date} {title} {description} />
 
 <main>
 	<section class="stack">
@@ -53,7 +55,13 @@
 		<Education {education} />
 	</section>
 </main>
-<footer></footer>
+<footer>
+	<address>
+		<a href="https://github.com/bleucitron">@bleucitron</a><br />
+		<a href="mailto:rcrestey@gmail.com">rcrestey@gmail.com</a><br />
+		<a href="tel:+33643505643">+33 (0) 6 43 50 56 43</a>
+	</address>
+</footer>
 
 <style>
 	h3 {
@@ -82,6 +90,23 @@
 			display: inline-flex;
 			justify-content: space-between;
 			width: 100%;
+		}
+	}
+
+	footer {
+		color: var(--grey);
+	}
+	address {
+		display: flex;
+		justify-content: space-between;
+		font-style: normal;
+
+		a {
+			&:hover,
+			&:focus {
+				background-color: black;
+				color: white;
+			}
 		}
 	}
 </style>

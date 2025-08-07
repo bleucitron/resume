@@ -2,11 +2,14 @@
 	import Header from '$lib/components/Header.svelte';
 	import Position from '$lib/components/Position.svelte';
 	import AoC from '$lib/components/AoC.svelte';
+	import Stack from '$lib/components/Stack.svelte';
+	import { isLang } from '$lib/icons';
 
 	const { data } = $props();
 
 	const { title, description, personal_info, positions, hobbies, aoc } = $derived(data);
 	$inspect(data);
+	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
 </script>
 
 <Header name={personal_info.name} {title} {description} />
@@ -15,7 +18,7 @@
 	<section>
 		<h3>Expériences</h3>
 
-		{#each positions as position}
+		{#each positions as position (position.from + position.to)}
 			<Position {...position} />
 		{/each}
 	</section>
@@ -24,10 +27,15 @@
 		<h3>Fun</h3>
 		<ul class="hobbies">
 			<li class="hobby">
-				<AoC instances={aoc} />
+				<span><AoC instances={aoc} /><Stack stack={aocStack} /></span>
 			</li>
-			{#each hobbies as hobby}
-				<li class="hobby">{hobby}</li>
+			{#each hobbies as hobby (hobby)}
+				<li class="hobby">
+					<span
+						>{hobby}
+						{#if hobby.includes('Svelte')}<Stack stack={['svelte']} />{/if}
+					</span>
+				</li>
 			{/each}
 		</ul>
 	</section>
@@ -50,13 +58,14 @@
 	}
 
 	.hobby {
-		/* display: inline-flex; */
-		/* justify-content: space-between; */
-	}
-
-	li {
 		&::marker {
 			color: var(--grey);
+		}
+
+		span {
+			display: inline-flex;
+			justify-content: space-between;
+			width: 100%;
 		}
 	}
 </style>

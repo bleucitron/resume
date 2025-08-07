@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { isLang, langById } from '$lib/icons';
-	import Stack from './Stack.svelte';
 
 	type Instance = {
 		year: number;
@@ -13,7 +12,6 @@
 	};
 
 	const { instances }: Props = $props();
-	const stack = $derived(instances.map((instance) => instance.lang).filter(isLang));
 </script>
 
 {#snippet score({ year, lang, score }: Instance)}
@@ -29,15 +27,10 @@
 		{/if}{/each}
 {/snippet}
 
-<span class="AoC"><span>Advent of Code {@render scores({ instances })}</span><Stack {stack} /></span
->
+<span class="AoC">Advent of Code {@render scores({ instances })}</span>
 
 <style>
 	.AoC {
-		display: inline-flex;
-		width: 100%;
-		justify-content: space-between;
-
 		:global(.star) {
 			color: orange;
 		}

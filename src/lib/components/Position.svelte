@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Company, Project } from '$lib/types';
 
-	import { type LangId } from '$lib/icons';
 	import Period from './Period.svelte';
 	import Stack from './Stack.svelte';
 
@@ -13,7 +12,7 @@
 		to?: string;
 		tasks?: string[];
 		projects?: Project[];
-		stack?: LangId[];
+		stack?: string[];
 	};
 
 	const { title, description, company, from, to, tasks, projects, stack = [] }: Props = $props();

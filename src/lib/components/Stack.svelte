@@ -1,15 +1,14 @@
 <script lang="ts">
-	import { langById, type LangId } from '$lib/icons';
+	import { isLang } from '$lib/icons';
 	import Lang from './Lang.svelte';
 
 	type Props = {
-		stack?: LangId[];
+		stack?: string[];
 	};
 
 	const { stack = [] }: Props = $props();
 
-	// sveltekit is not available as icon
-	const cleanStack = $derived(stack.filter((lang) => Object.keys(langById).includes(lang)));
+	const cleanStack = $derived(stack.filter(isLang));
 </script>
 
 <div class="Stack">

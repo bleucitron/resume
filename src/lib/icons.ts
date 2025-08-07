@@ -16,6 +16,8 @@ export const langById = {
 	python: { name: 'Python', icon: 'nf-dev-python' },
 	rust: { name: 'Rust', icon: 'nf-dev-rust' },
 	lua: { name: 'Lua', icon: 'nf-dev-lua' },
+	neovim: { name: 'Neovim', icon: 'nf-linux-neovim' },
+	git: { name: 'Git', icon: 'nf-dev-git' },
 } as const;
 
 export type LangId = keyof typeof langById;

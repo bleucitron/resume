@@ -33,6 +33,9 @@
 
 .nf-dev-python {
 	color: #3274a5;
+	background-image: linear-gradient(135deg, #316193 50%, #ffdc53 50%);
+	color: transparent;
+	background-clip: text;
 }
 
 .nf-dev-cypressio {
@@ -49,4 +52,15 @@
 
 .nf-dev-lua {
 	color: #00007f;
+}
+
+.nf-linux-neovim {
+	background-color: #4e8d3d;
+	background-image: linear-gradient(56deg, #166aab 42%, #4e8d3d 42%);
+	color: transparent;
+	background-clip: text;
+}
+
+.nf-dev-git {
+	color: #f05133;
 }

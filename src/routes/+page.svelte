@@ -8,7 +8,8 @@
 
 	const { data } = $props();
 
-	const { title, description, personal_info, positions, hobbies, aoc, education } = $derived(data);
+	const { title, description, personal_info, stack, positions, hobbies, aoc, education } =
+		$derived(data);
 	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
 
 	$inspect(data);
@@ -17,6 +18,11 @@
 <Header name={personal_info.name} {title} {description} />
 
 <main>
+	<section class="stack">
+		<h3>Stack</h3>
+
+		<Stack {stack} verbose --margin="auto" --font-size="1.3rem" />
+	</section>
 	<section>
 		<h3>Expériences</h3>
 
@@ -58,6 +64,12 @@
 		&::marker {
 			color: var(--grey);
 		}
+	}
+
+	.stack {
+		display: flex;
+		gap: 1rem;
+		align-items: baseline;
 	}
 
 	.hobbies {

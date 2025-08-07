@@ -11,12 +11,12 @@
 	const { icon, name } = $derived(langById[id]);
 </script>
 
-<span title={name}
-	>{#if verbose}{name}{/if}<i class="nf {icon}"></i></span
+<span class="Lang" title={name}
+	><i class="nf {icon}"></i>{#if verbose}&nbsp;{name}{/if}</span
 >
 
 <style>
-	span {
+	.Lang {
 		display: inline-flex;
 		align-items: center;
 	}

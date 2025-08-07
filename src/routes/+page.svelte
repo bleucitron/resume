@@ -4,12 +4,14 @@
 	import AoC from '$lib/components/AoC.svelte';
 	import Stack from '$lib/components/Stack.svelte';
 	import { isLang } from '$lib/icons';
+	import Education from '$lib/components/Education.svelte';
 
 	const { data } = $props();
 
-	const { title, description, personal_info, positions, hobbies, aoc } = $derived(data);
-	$inspect(data);
+	const { title, description, personal_info, positions, hobbies, aoc, education } = $derived(data);
 	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
+
+	$inspect(data);
 </script>
 
 <Header name={personal_info.name} {title} {description} />
@@ -42,6 +44,7 @@
 
 	<section>
 		<h3>Formation</h3>
+		<Education {education} />
 	</section>
 </main>
 <footer></footer>
@@ -51,16 +54,18 @@
 		font-size: 1.7rem;
 	}
 
+	li {
+		&::marker {
+			color: var(--grey);
+		}
+	}
+
 	.hobbies {
 		list-style-type: hiragana-iroha;
 		padding-left: 2rem;
 	}
 
 	.hobby {
-		&::marker {
-			color: var(--grey);
-		}
-
 		span {
 			display: inline-flex;
 			justify-content: space-between;

@@ -203,11 +203,11 @@
 		},
 		{
 			"title": "Diplôme d'ingénieur généraliste",
-			"description": "Cursus Erasmus à Madrid",
 			"school": "École Centrale Méditerrannée",
 			"location": "Marseille",
+			"info": "dont 2 ans de cursus Erasmus à l'ETSII, Madrid",
 			"from": "2004-09",
-			"to": "2008-06"
+			"to": "2009-06"
 		},
 		{
 			"title": "Classes préparatoires MPSI/MP",
@@ -217,7 +217,7 @@
 			"to": "2004-06"
 		},
 		{
-			"title": "Baccalauréat Scientifique",
+			"title": "Baccalauréat Scientifique, spécialité Mathématiques",
 			"school": "Lycée Ozenne",
 			"location": "Toulouse",
 			"from": "1999-09",

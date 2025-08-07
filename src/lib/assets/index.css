@@ -28,7 +28,6 @@ body {
 	flex-flow: column;
 	gap: 2rem;
 	width: 120ch;
-	height: 100vh;
 	margin: auto;
 	padding: 2rem 10ch;
 	font-family: var(--code-font);

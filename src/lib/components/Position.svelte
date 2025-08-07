@@ -106,6 +106,7 @@
 		}
 
 		.tasks {
+			display: none;
 			margin: 0;
 			font-size: 0.9rem;
 			list-style-type: circle;

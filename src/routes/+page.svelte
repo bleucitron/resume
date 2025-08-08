@@ -23,7 +23,7 @@
 	<section class="stack">
 		<h3>Stack</h3>
 
-		<Stack {stack} verbose --margin="auto" --font-size="1.3rem" />
+		<Stack {stack} verbose --margin="0 auto" --font-size="1.1rem" />
 	</section>
 	<section>
 		<h3>Expériences</h3>
@@ -96,6 +96,7 @@
 	footer {
 		color: var(--grey);
 	}
+
 	address {
 		display: flex;
 		justify-content: space-between;
@@ -108,5 +109,10 @@
 				color: white;
 			}
 		}
+	}
+
+	@page {
+		margin: 1cm 2cm;
+		size: A4;
 	}
 </style>

@@ -13,12 +13,12 @@
 	<section>
 		<div>
 			<h2>{name}</h2>
-			<p>{age} ans</p>
+			<p class="weak">{age} ans</p>
 		</div>
 
 		<h1>{title}</h1>
 	</section>
-	<ul>
+	<ul class="weak">
 		{#each description as line}
 			<li>{line}</li>
 		{/each}
@@ -35,6 +35,7 @@
 
 	h1 {
 		font-size: 1.7rem;
+		line-height: 1.1;
 		font-weight: normal;
 		margin: 0;
 		text-align: end;
@@ -44,7 +45,7 @@
 	h2 {
 		width: 7ch;
 		font-size: 3rem;
-		line-height: 0.66;
+		line-height: 0.7;
 		margin-block: 0.5rem;
 	}
 
@@ -59,6 +60,7 @@
 
 	ul {
 		margin: 0;
+		margin-top: 0.1rem;
 		padding: 0;
 		list-style: none;
 	}

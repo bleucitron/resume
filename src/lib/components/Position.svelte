@@ -22,7 +22,7 @@
 <article class="Position">
 	<header>
 		<h4>
-			<span>{title}</span>
+			<span class="title">{title}</span>
 			{#if company}<span class="weak">chez</span> <a href={company.website}>{company.name}</a>{/if}
 		</h4>
 		<Period {from} {to} />
@@ -63,14 +63,16 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: baseline;
+			margin-block: 0.2rem;
 		}
 
 		h4 {
 			color: black;
-			/* span:first-child { */
-			/* 	color: white; */
-			/* 	background: hsl(0 0 30%); */
-			/* } */
+			font-weight: normal;
+
+			.title {
+				font-weight: bold;
+			}
 		}
 
 		h4,
@@ -98,7 +100,6 @@
 			p::before {
 				content: '❯';
 				color: var(--green);
-				/* color: black; */
 				margin-right: 0.5rem;
 				position: relative;
 				bottom: 0.09rem;
@@ -110,6 +111,11 @@
 			margin: 0;
 			font-size: 0.9rem;
 			list-style-type: circle;
+
+			a,
+			:global(time) {
+				opacity: 0.7;
+			}
 		}
 
 		&:last-child {
@@ -117,6 +123,10 @@
 				background-image: linear-gradient(90deg, black, white);
 				color: transparent;
 				background-clip: text;
+
+				@media print {
+					color: inherit;
+				}
 			}
 		}
 	}

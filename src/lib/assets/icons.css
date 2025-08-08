@@ -32,10 +32,16 @@
 }
 
 .nf-dev-python {
-	color: #3274a5;
-	background-image: linear-gradient(135deg, #316193 50%, #ffdc53 50%);
+	--python-1: #ffdc53;
+	--python-2: #3274a5;
+
+	background-image: linear-gradient(135deg, var(--python-2) 50%, var(--python-2) 50%);
 	color: transparent;
 	background-clip: text;
+
+	@media print {
+		color: var(--python-1);
+	}
 }
 
 .nf-dev-cypressio {
@@ -55,10 +61,17 @@
 }
 
 .nf-linux-neovim {
-	background-color: #4e8d3d;
-	background-image: linear-gradient(56deg, #166aab 42%, #4e8d3d 42%);
+	--neovim-1: #4e8d3d;
+	--neovim-2: #166aab;
+
+	background-color: var(--neovim-1);
+	background-image: linear-gradient(56deg, var(--neovim-2) 42%, var(--neovim-1) 42%);
 	color: transparent;
 	background-clip: text;
+
+	@media print {
+		color: var(--neovim-1);
+	}
 }
 
 .nf-dev-git {
@@ -70,15 +83,35 @@
 }
 
 .nf-dev-vitest {
-	background-color: #fcc72b;
-	background-image: linear-gradient(325deg, #729b1b 42%, #fcc72b 42%);
+	--vitest-1: #fcc72b;
+	--vitest-2: #729b1b;
+
+	background-color: var(--vitest-1);
+	background-image: linear-gradient(325deg, var(--vitest-2) 42%, var(--vitest-1) 42%);
 	color: transparent;
 	background-clip: text;
+
+	@media print {
+		color: var(--vitest-1);
+	}
 }
 
 .nf-dev-playwright {
-	background-color: #d65348;
-	background-image: linear-gradient(90deg, #d65348 33%, #2ead33 33%);
+	--playwright-1: #2ead33;
+	--playwright-2: #d65348;
+
+	background-color: var(--playwright-1);
+	background-image: linear-gradient(90deg, var(--playwright-2) 33%, var(--playwright-1) 33%);
 	color: transparent;
 	background-clip: text;
+
+	@media print {
+		color: var(--playwright-w);
+	}
 }
+
+/* @media print { */
+/* 	.nf { */
+/* 		color: lightgrey; */
+/* 	} */
+/* } */

@@ -1,18 +1,22 @@
 @import '@fontsource/dm-serif-display';
 @import '@fontsource/commit-mono';
-@import '@fontsource/jetbrains-mono';
+/* @import '@fontsource/jetbrains-mono'; */
 @import 'https://www.nerdfonts.com/assets/css/webfont.css';
 
 @import 'icons.css';
 
 :root {
-	--green: mediumseagreen;
-	/* --code-font: Commit Mono, monospace; */
-	--code-font: JetBrains Mono, monospace;
+	--green: forestgreen;
+	--code-font: Commit Mono, monospace;
+	/* --code-font: JetBrains Mono, monospace; */
 	--title-font: DM Serif Display, Georgia, serif;
 
-	--grey: hsl(0 0 70%);
+	--grey: hsl(0 0 65%);
 	--purple: #ca72e4;
+
+	@media print {
+		--grey: hsl(0 0 80%);
+	}
 }
 
 * {
@@ -31,12 +35,14 @@ body {
 	margin: auto;
 	padding: 2rem 10ch;
 	font-family: var(--code-font);
+	line-height: 1.2;
 
 	/* background: lightgrey; */
 	/* outline: 1px dashed orange; */
 
 	@media print {
 		width: 21cm;
+		height: 29.7cm;
 	}
 }
 
@@ -64,4 +70,10 @@ h3 {
 
 a {
 	text-decoration: none;
+}
+
+@media print {
+	body {
+		padding: 0;
+	}
 }

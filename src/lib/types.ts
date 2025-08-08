@@ -5,8 +5,10 @@ export type Company = {
 	website?: string;
 };
 
-export type Project = {
-	description: string;
-	client?: Company;
-	duration?: DurationObjectUnits;
-};
+export type Project =
+	| {
+			description: string;
+			client?: Company;
+			duration?: DurationObjectUnits;
+	  }
+	| string;

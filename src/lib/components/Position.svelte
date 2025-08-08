@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Company, Project } from '$lib/types';
 
+	import { Duration } from 'luxon';
+
 	import Period from './Period.svelte';
 	import Stack from './Stack.svelte';
 
@@ -10,13 +12,26 @@
 		company?: Company;
 		from: string;
 		to?: string;
-		tasks?: string[];
 		projects?: Project[];
 		stack?: string[];
 	};
 
-	const { title, description, company, from, to, tasks, projects, stack = [] }: Props = $props();
-	$inspect(to);
+	const { title, description, company, from, to, projects = [], stack = [] }: Props = $props();
+
+	function normalizeProjects(projects: Project[]) {
+		const filtered = projects.filter((project) => {
+			if (typeof project === 'string') return true;
+
+			if (!project.duration) return true;
+
+			const relevant = Duration.fromObject(project.duration).as('week') >= 10;
+			return relevant;
+		});
+
+		return filtered.length !== projects.length ? [...filtered, "et d'autres..."] : projects;
+	}
+
+	const normalizedProjects = $derived(normalizeProjects(projects));
 </script>
 
 <article class="Position">
@@ -33,21 +48,20 @@
 		</div>
 	{/if}
 
-	{#if tasks?.length}
+	{#if projects?.length}
 		<ul class="tasks">
-			{#each tasks as task}
-				<li>{task}</li>
-			{/each}
-		</ul>
-	{:else if projects?.length}
-		<ul class="tasks">
-			{#each projects as { description, client, duration }}
+			{#each normalizedProjects as project}
+				{@const isString = typeof project === 'string'}
+				{@const description = isString ? project : project.description}
+				{@const client = isString ? undefined : project.client}
+				{@const duration = isString ? undefined : project.duration}
 				<li>
 					{description}
+
 					{#if client}pour
 						<a href={client.website} target="_blank" rel="noopener noreferrer">{client.name}</a
 						>{/if}
-					<Period {duration} />
+					{#if duration}<Period {duration} />{/if}
 				</li>
 			{/each}
 		</ul>

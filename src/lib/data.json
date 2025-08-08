@@ -20,7 +20,7 @@
 			},
 			"title": "Développeur web full-stack senior",
 			"description": "Développement de la plateforme web unifiée de Radiofrance",
-			"tasks": [
+			"projects": [
 				"Simplification de l'architecture globale Backend-For-Frontend de la plateforme",
 				"Amélioration de l'architecture de chargement de données via GraphQL",
 				"Migration vers Svelte 5",
@@ -76,7 +76,7 @@
 			},
 			"title": "Développeur web front-end senior",
 			"description": "Développement d'une plateforme d'aide au financement public",
-			"tasks": ["Optimisation des chargements de données", "Migration de Sapper vers SvelteKit"],
+			"projects": ["Optimisation des chargements de données", "Migration de Sapper vers SvelteKit"],
 			"stack": ["svelte", "sveltekit", "typescript", "nodejs", "vitest", "cypress", "git"],
 			"from": "2020-10",
 			"to": "2022-11"
@@ -88,7 +88,7 @@
 			},
 			"title": "Développeur web senior",
 			"description": "Responsable des développements web",
-			"tasks": [
+			"projects": [
 				"Maintenance de la plateforme de jeux thérapeutiques Medimoov",
 				"Prototypage de la version 2 de Medimoov",
 				"Développement de divers sites d'informations pour l'ARS Île-de-France et la MACIF",

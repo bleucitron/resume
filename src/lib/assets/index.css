@@ -37,7 +37,7 @@ body {
 	gap: 2rem;
 	width: 120ch;
 	margin: auto;
-	padding: 2rem 10ch;
+	padding: 4rem 10ch;
 	font-family: var(--code-font);
 	line-height: 1.2;
 
@@ -47,6 +47,7 @@ body {
 	@media print {
 		width: 21cm;
 		height: 29.7cm;
+		padding: 0;
 	}
 }
 
@@ -64,6 +65,7 @@ footer {
 h1,
 h2,
 h3 {
+	margin-block: 3rem 1.5rem;
 	font-family: var(--title-font);
 }
 
@@ -76,8 +78,7 @@ a {
 	text-decoration: none;
 }
 
-@media print {
-	body {
-		padding: 0;
-	}
+@page {
+	margin: 1.5cm 2cm;
+	size: A4;
 }

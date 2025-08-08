@@ -28,7 +28,7 @@
 			return relevant;
 		});
 
-		return filtered.length !== projects.length ? [...filtered, "et d'autres..."] : projects;
+		return filtered;
 	}
 
 	const normalizedProjects = $derived(normalizeProjects(projects));

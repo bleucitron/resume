@@ -110,9 +110,4 @@
 			}
 		}
 	}
-
-	@page {
-		margin: 1cm 2cm;
-		size: A4;
-	}
 </style>

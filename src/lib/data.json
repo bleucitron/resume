@@ -23,7 +23,6 @@
 			"projects": [
 				"Simplification de l'architecture globale Backend-For-Frontend de la plateforme",
 				"Amélioration de l'architecture de chargement de données via GraphQL",
-				"Migration vers Svelte 5",
 				"Développement de l'expérience interactive \"Ma Saison Radio\"",
 				"Mise en place de stratégies pour nettoyer 900+ erreurs TypeScript",
 				"Rénovation du système de tracking côté client",
@@ -45,17 +44,8 @@
 		},
 		{
 			"title": "Formateur en développement web",
-			"description": "Animation de formations sur JavaScript, React, Svelte, SvelteKit, Algorithmes",
-			"stack": [
-				"svelte",
-				"sveltekit",
-				"react",
-				"typescript",
-				"javascript",
-				"nodejs",
-				"postgresql",
-				"git"
-			],
+			"description": "Animation de formations sur Svelte/Kit, JavaScript, React, Algorithmes",
+			"stack": ["svelte", "sveltekit", "react", "typescript", "javascript", "nodejs"],
 			"projects": [
 				{
 					"description": "Cours de M1 et M2, suivi de projet (XXX heures, XXX élèves)",
@@ -90,8 +80,7 @@
 			"projects": [
 				"Maintenance de la plateforme de jeux thérapeutiques Medimoov",
 				"Prototypage de la version 2 de Medimoov",
-				"Développement de divers sites d'informations pour l'ARS Île-de-France et la MACIF",
-				"Outillage interne"
+				"Développement de divers sites d'informations pour l'ARS Île-de-France et la MACIF"
 			],
 			"stack": ["react", "nextjs", "typescript", "nodejs", "vitest", "git"],
 			"from": "2019-06",
@@ -163,6 +152,10 @@
 			},
 			"title": "Développeur associé",
 			"description": "Conseil en innovation et data orienté bien commun",
+			"projects": [
+				"Prédictions d'affluence en déchetteries et sur les plages",
+				"Affichage 3D de la ville de Bordeaux dans le navigateur"
+			],
 			"stack": [
 				"react",
 				"javascript",

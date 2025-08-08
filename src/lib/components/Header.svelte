@@ -9,7 +9,7 @@
 	$inspect(birth_date);
 </script>
 
-<header>
+<header class="Header">
 	<section>
 		<div>
 			<h2>{name}</h2>
@@ -26,48 +26,52 @@
 </header>
 
 <style>
-	section {
-		display: flex;
-		justify-content: space-between;
+	.Header {
+		margin-bottom: 1rem;
 
-		border-bottom: 1px solid black;
-	}
+		section {
+			display: flex;
+			justify-content: space-between;
 
-	h1 {
-		font-size: 1.7rem;
-		line-height: 1.1;
-		font-weight: normal;
-		margin: 0;
-		text-align: end;
-		align-self: end;
-	}
-
-	h2 {
-		width: 7ch;
-		font-size: 3rem;
-		line-height: 0.66;
-		margin-block: 0.5rem;
-	}
-
-	div:has(h2) {
-		display: flex;
-		align-items: end;
-
-		p {
-			margin: 0;
+			border-bottom: 1px solid black;
 		}
-	}
 
-	ul {
-		margin: 0;
-		margin-top: 0.1rem;
-		padding: 0;
-		list-style: none;
-	}
+		h1 {
+			font-size: 1.7rem;
+			line-height: 1.1;
+			font-weight: normal;
+			margin: 0;
+			text-align: end;
+			align-self: end;
+		}
 
-	li {
-		margin: 0;
-		text-align: end;
-		white-space: pre;
+		h2 {
+			width: 7ch;
+			font-size: 3rem;
+			line-height: 0.66;
+			margin-block: 0.5rem;
+		}
+
+		div:has(h2) {
+			display: flex;
+			align-items: end;
+
+			p {
+				margin: 0;
+			}
+		}
+
+		ul {
+			margin: 0;
+			margin-top: 0.1rem;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			margin: 0;
+			text-align: end;
+			white-space: pre;
+		}
 	}
 </style>

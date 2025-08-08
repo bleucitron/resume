@@ -27,8 +27,6 @@
 
 <style>
 	.Header {
-		margin-bottom: 1rem;
-
 		section {
 			display: flex;
 			justify-content: space-between;

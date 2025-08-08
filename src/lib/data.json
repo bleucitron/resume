@@ -206,6 +206,32 @@
 		{ "year": 2022, "lang": "javascript", "score": 50 },
 		{ "year": 2020, "lang": "rust", "score": 50 }
 	],
+	"references": [
+		{
+			"name": "Khalid Slimani",
+			"email": "khalid.slimani@radiofrance.fr",
+			"position": "Responsable équipe WebRF",
+			"company": "Radiofrance"
+		},
+		{
+			"name": "Arnaud Guillotin",
+			"email": "arnaud@mesaidespubliques.fr",
+			"position": "CTO",
+			"company": "MAPi"
+		},
+		{
+			"name": "Antoine Seilles",
+			"email": "antoine@naturalpad.fr",
+			"position": "CEO",
+			"company": "NaturalPad"
+		},
+		{
+			"name": "David Bruant",
+			"email": "davidbruant@protonmail.com",
+			"position": "Freelance",
+			"company": "Beta.gouv"
+		}
+	],
 	"education": [
 		{
 			"title": "Mastère spécialisé \"Structures aéronautiques et spatiales\"",

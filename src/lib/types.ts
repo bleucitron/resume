@@ -12,3 +12,10 @@ export type Project =
 			duration?: DurationObjectUnits;
 	  }
 	| string;
+
+export type Reference = {
+	name: string;
+	position: string;
+	company: string;
+	email: string;
+};

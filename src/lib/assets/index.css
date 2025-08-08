@@ -65,7 +65,7 @@ footer {
 h1,
 h2,
 h3 {
-	margin-block: 3rem 1.5rem;
+	margin-block: 2.5rem 1rem;
 	font-family: var(--title-font);
 }
 
@@ -76,6 +76,10 @@ h3 {
 
 a {
 	text-decoration: none;
+}
+
+address {
+	font-style: normal;
 }
 
 @page {

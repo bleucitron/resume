@@ -5,11 +5,21 @@
 	import Stack from '$lib/components/Stack.svelte';
 	import { isLang } from '$lib/icons';
 	import Education from '$lib/components/Education.svelte';
+	import References from '$lib/components/References.svelte';
 
 	const { data } = $props();
 
-	const { title, description, personal_info, stack, positions, hobbies, aoc, education } =
-		$derived(data);
+	const {
+		title,
+		description,
+		personal_info,
+		stack,
+		positions,
+		hobbies,
+		aoc,
+		education,
+		references,
+	} = $derived(data);
 	const { name, birth_date } = $derived(personal_info);
 
 	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
@@ -48,6 +58,11 @@
 				</li>
 			{/each}
 		</ul>
+	</section>
+
+	<section>
+		<h3>Références</h3>
+		<References {references} />
 	</section>
 
 	<section>
@@ -100,7 +115,6 @@
 	address {
 		display: flex;
 		justify-content: space-between;
-		font-style: normal;
 
 		a {
 			&:hover,

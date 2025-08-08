@@ -21,14 +21,13 @@
 			"title": "Développeur web full-stack senior",
 			"description": "Développement de la plateforme web unifiée de Radiofrance",
 			"tasks": [
-				"Leadership technique, participation aux recrutements",
-				"Optimisation des chargements de données",
 				"Simplification de l'architecture globale Backend-For-Frontend de la plateforme",
+				"Amélioration de l'architecture de chargement de données via GraphQL",
+				"Migration vers Svelte 5",
 				"Développement de l'expérience interactive \"Ma Saison Radio\"",
 				"Mise en place de stratégies pour nettoyer 900+ erreurs TypeScript",
 				"Rénovation du système de tracking côté client",
-				"Tests unitaires et e2e",
-				"Mise en place d'un système de mocks pour les tests e2e",
+				"Tests unitaires et e2e, mise en place d'un système de mocking",
 				"Maintenance et optimisation de la pipeline"
 			],
 			"stack": [
@@ -48,14 +47,23 @@
 		{
 			"title": "Formateur en développement web",
 			"description": "Animation de formations sur JavaScript, React, Svelte, SvelteKit, Algorithmes",
-			"stack": ["svelte", "sveltekit", "react", "typescript", "javascript", "nodejs", "git"],
+			"stack": [
+				"svelte",
+				"sveltekit",
+				"react",
+				"typescript",
+				"javascript",
+				"nodejs",
+				"postgresql",
+				"git"
+			],
 			"projects": [
 				{
-					"description": "Cours de M1 et M2, XXX heures, XXX élèves",
+					"description": "Cours de M1 et M2, suivi de projet (XXX heures, XXX élèves)",
 					"client": { "name": "ECV Digital", "website": "https://www.ecv.fr/digital" }
 				},
 				{
-					"description": "Sessions de Formation Continue, XXX heures, XXX élèves",
+					"description": "Sessions de Formation Continue (XXX heures, XXX élèves)",
 					"client": { "name": "Human Coders", "website": "https://www.humancoders.com" }
 				}
 			],
@@ -68,11 +76,7 @@
 			},
 			"title": "Développeur web front-end senior",
 			"description": "Développement d'une plateforme d'aide au financement public",
-			"tasks": [
-				"Leadership technique",
-				"Optimisation des chargements de données",
-				"Migration de Sapper vers SvelteKit"
-			],
+			"tasks": ["Optimisation des chargements de données", "Migration de Sapper vers SvelteKit"],
 			"stack": ["svelte", "sveltekit", "typescript", "nodejs", "vitest", "cypress", "git"],
 			"from": "2020-10",
 			"to": "2022-11"
@@ -86,12 +90,9 @@
 			"description": "Responsable des développements web",
 			"tasks": [
 				"Maintenance de la plateforme de jeux thérapeutiques Medimoov",
-				"Développement d'un POC pour la version 2 de Medimoov",
-				"Développement de divers sites d'informations sur la santé pour l'ARS Île-de-France et la MACIF",
-				"Développement d'outils internes",
-				"https://mon-fibrome.fr",
-				"https://bienetre.naturalpad.fr",
-				"https://garder-lequilibre.fr"
+				"Prototypage de la version 2 de Medimoov",
+				"Développement de divers sites d'informations pour l'ARS Île-de-France et la MACIF",
+				"Outillage interne"
 			],
 			"stack": ["react", "nextjs", "typescript", "nodejs", "vitest", "git"],
 			"from": "2019-06",

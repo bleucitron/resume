@@ -11,7 +11,7 @@
 		"phone_number": "+33 (0)6 43 50 56 43",
 		"github": "bleucitron"
 	},
-	"stack": ["svelte", "typescript", "nodejs", "neovim", "git"],
+	"stack": ["svelte", "typescript", "nodejs", "git", "neovim"],
 	"positions": [
 		{
 			"company": {

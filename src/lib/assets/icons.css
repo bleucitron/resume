@@ -68,3 +68,17 @@
 .nf-fa-plane {
 	color: hsl(0 0 80%);
 }
+
+.nf-dev-vitest {
+	background-color: #fcc72b;
+	background-image: linear-gradient(325deg, #729b1b 42%, #fcc72b 42%);
+	color: transparent;
+	background-clip: text;
+}
+
+.nf-dev-playwright {
+	background-color: #d65348;
+	background-image: linear-gradient(90deg, #d65348 33%, #2ead33 33%);
+	color: transparent;
+	background-clip: text;
+}

@@ -60,8 +60,7 @@
 
 					{#if client}pour
 						<a href={client.website} target="_blank" rel="noopener noreferrer">{client.name}</a
-						>{/if}
-					{#if duration}<Period {duration} />{/if}
+						>{/if}{#if duration}, pendant <Period {duration} />{/if}
 				</li>
 			{/each}
 		</ul>
@@ -95,12 +94,12 @@
 		}
 
 		a {
-			color: var(--green);
+			color: var(--blue);
 			transition: all 0.2s ease-in-out;
 
 			&:hover {
 				color: white;
-				background: var(--green);
+				background: var(--blue);
 			}
 		}
 
@@ -113,7 +112,7 @@
 
 			p::before {
 				content: '❯';
-				color: var(--green);
+				color: var(--blue);
 				margin-right: 0.5rem;
 				position: relative;
 				bottom: 0.09rem;
@@ -128,7 +127,7 @@
 
 			a,
 			:global(time) {
-				opacity: 0.7;
+				opacity: 0.9;
 			}
 		}
 

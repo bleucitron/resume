@@ -7,40 +7,50 @@
 		duration?: DurationObjectUnits;
 	};
 
-	const { from, to, duration }: Props = $props();
+	const { from, to, duration: d }: Props = $props();
 
 	const fromDate = $derived(from ? DateTime.fromISO(from, { locale: 'fr' }) : undefined);
 	const toDate = $derived(to ? DateTime.fromISO(to, { locale: 'fr' }) : undefined);
 
-	const _duration = $derived(
-		duration ??
-			(fromDate && (toDate ?? DateTime.now()).diff(fromDate, ['years', 'months']).toObject()),
+	const durationObject = $derived(
+		d ?? (fromDate && (toDate ?? DateTime.now()).diff(fromDate, ['years', 'months']).toObject()),
 	);
+
+	const duration = $derived(
+		durationObject && Duration.fromObject(durationObject).reconfigure({ locale: 'fr' }),
+		// Duration.fromObject(durationObject).shiftTo('years').reconfigure({ locale: 'fr' }),
+	);
+
+	$inspect('duration', duration?.toObject());
 
 	const formattedDuration = $derived(
-		_duration &&
-			Duration.fromObject(_duration).reconfigure({ locale: 'fr' }).toHuman({ listStyle: 'short' }),
+		duration?.toHuman({
+			listStyle: 'short',
+			// minimumFractionDigits: 1,
+			maximumSignificantDigits: 1,
+			// roundingMode: 'halfExpand',
+		}),
 	);
 	// const formattedDuration = new Intl.DurationFormat('fr-FR', { style: 'long' }).format(duration);
-	$inspect(formattedDuration);
+	$inspect(formattedDuration, parseFloat(formattedDuration?.replace(',', '.') ?? ''));
 </script>
 
-<time class="Period">
+<time class="Period" title={formattedDuration}>
 	{#if fromDate && toDate}
 		<span class="weak">de</span>
 		{fromDate.year} <span class="weak">à</span>
-		{toDate.year}<span class="weak">,</span>
-		{formattedDuration}
+		{toDate.year}<span class="weak"></span>
 	{:else if fromDate}
-		<span class="weak">depuis</span> {fromDate.year}
-	{:else if duration}
+		<span class="weak">depuis</span>
+		{fromDate.year}
+	{:else if d}
 		{formattedDuration}
 	{/if}
 </time>
 
 <style>
 	.Period {
-		color: darkorange;
+		color: var(--orange);
 		font-size: 0.9rem;
 		text-align: right;
 	}

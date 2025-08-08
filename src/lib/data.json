@@ -41,8 +41,7 @@
 				"git",
 				"neovim"
 			],
-			"from": "2023-01",
-			"to": "2025-12"
+			"from": "2023-01"
 		},
 		{
 			"title": "Formateur en développement web",
@@ -206,10 +205,8 @@
 	"hobbies": [
 		"Traduction de la documentation de Svelte et SvelteKit",
 		"Pas assez d'étagères pour toutes mes BDs",
-		"Chercheur de Korogus à la nuit tombée",
 		"Danseur de Lindy Hop occasionnel",
-		"Gribouille de temps en temps",
-		"Gratouille de temps à autre"
+		"Gribouille et gratouille de temps à autre"
 	],
 	"aoc": [
 		{ "year": 2023, "lang": "lua", "score": 42 },

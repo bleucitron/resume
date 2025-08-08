@@ -45,7 +45,7 @@
 	h2 {
 		width: 7ch;
 		font-size: 3rem;
-		line-height: 0.7;
+		line-height: 0.66;
 		margin-block: 0.5rem;
 	}
 

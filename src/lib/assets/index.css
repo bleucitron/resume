@@ -15,6 +15,7 @@
 	--orange: hsl(39 80% 50% / 0.85);
 	--grey: hsl(0 0 63%);
 	--purple: #ca72e4;
+	--black: #4e4e4e;
 
 	@media print {
 		--grey: hsl(0 0 80%);
@@ -85,6 +86,10 @@ h3 {
 
 address {
 	font-style: normal;
+}
+
+.hidden {
+	display: none;
 }
 
 @page {

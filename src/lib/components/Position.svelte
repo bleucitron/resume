@@ -5,6 +5,7 @@
 
 	import Period from './Period.svelte';
 	import Stack from './Stack.svelte';
+	import { page } from '$app/state';
 
 	type Props = {
 		title: string;
@@ -17,6 +18,8 @@
 	};
 
 	const { title, description, company, from, to, projects = [], stack = [] }: Props = $props();
+
+	const short = $derived(page.url.searchParams.get('short'));
 
 	function normalizeProjects(projects: Project[]) {
 		const filtered = projects.filter((project) => {
@@ -50,7 +53,7 @@
 	{/if}
 
 	{#if projects?.length}
-		<ul class="tasks weak">
+		<ul class={['tasks weak', { hidden: short }]}>
 			{#each normalizedProjects as project}
 				{@const isString = typeof project === 'string'}
 				{@const description = isString ? project : project.description}
@@ -120,7 +123,6 @@
 		}
 
 		.tasks {
-			/* display: none; */
 			margin: 0;
 			list-style-type: circle;
 

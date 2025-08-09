@@ -1,9 +1,13 @@
 <script lang="ts">
 	import type { Reference } from '$lib/types';
 
+	import { page } from '$app/state';
+
 	type Props = {
 		references: Reference[];
 	};
+
+	const short = $derived(page.url.searchParams.get('short'));
 
 	const { references }: Props = $props();
 </script>
@@ -15,7 +19,7 @@
 				<span class="name">{name}</span>
 				<a href="mailto:{email}">{email}</a>
 			</address>
-			<p>└ {position} chez {company}</p>
+			<p class={{ hidden: short }}>└ {position} chez {company}</p>
 		</li>
 	{/each}
 </ul>
@@ -45,6 +49,8 @@
 			display: inline-flex;
 			justify-content: space-between;
 			width: 100%;
+			border-bottom: 1px dotted lightgrey;
+			line-height: 0.66;
 		}
 	}
 </style>

@@ -7,6 +7,7 @@
 	import References from '$lib/components/References.svelte';
 	import Talks from '$lib/components/Talks.svelte';
 	import Education from '$lib/components/Education.svelte';
+	import Menu from '$lib/components/Menu.svelte';
 
 	const { data } = $props();
 
@@ -26,9 +27,10 @@
 
 	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
 
-	$inspect(data);
+	// $inspect(data);
 </script>
 
+<Menu />
 <Header {name} {birth_date} {title} {description} />
 
 <main>

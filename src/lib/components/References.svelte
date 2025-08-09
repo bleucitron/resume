@@ -35,7 +35,7 @@
 		}
 
 		.name {
-			color: black;
+			color: var(--black);
 		}
 
 		a {

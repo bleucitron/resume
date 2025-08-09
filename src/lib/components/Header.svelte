@@ -36,7 +36,7 @@
 			display: flex;
 			justify-content: space-between;
 
-			border-bottom: 1px solid black;
+			border-bottom: 1px solid var(--black);
 		}
 
 		h1 {

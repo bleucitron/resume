@@ -84,7 +84,7 @@
 		}
 
 		h4 {
-			color: black;
+			color: var(--black);
 			font-weight: normal;
 
 			.title {
@@ -111,7 +111,7 @@
 			justify-content: space-between;
 			margin-block: 0.1rem;
 			font-size: 0.9rem;
-			color: black;
+			color: var(--black);
 
 			p::before {
 				content: '❯';
@@ -134,7 +134,7 @@
 
 		&:last-child {
 			.description p {
-				background-image: linear-gradient(90deg, black, white);
+				background-image: linear-gradient(90deg, var(--black), white);
 				color: transparent;
 				background-clip: text;
 

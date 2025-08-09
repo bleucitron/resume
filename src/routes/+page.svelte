@@ -138,13 +138,13 @@
 		text-align: right;
 
 		.name {
-			color: black;
+			color: var(--black);
 			font-size: 1.5rem;
 			font-family: var(--title-font);
 			line-height: 0.65;
 			border-bottom: 1px solid;
 			border-image-slice: 1;
-			border-image-source: linear-gradient(to right, white 10%, var(--grey) 70%, black);
+			border-image-source: linear-gradient(to right, white 10%, var(--grey) 70%, var(--black));
 			margin-bottom: 0.2rem;
 		}
 

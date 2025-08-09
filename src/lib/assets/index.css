@@ -15,7 +15,9 @@
 	--orange: hsl(39 80% 50% / 0.85);
 	--grey: hsl(0 0 63%);
 	--purple: #ca72e4;
-	--black: #4e4e4e;
+	--black: #121212;
+
+	--transition-duration: 0.2s;
 
 	@media print {
 		--grey: hsl(0 0 80%);
@@ -36,6 +38,7 @@ body {
 	width: 120ch;
 	margin: auto;
 	padding: 4rem 10ch;
+	color: var(--black);
 	font-family: var(--code-font);
 	line-height: 1.2;
 
@@ -56,11 +59,11 @@ p {
 a {
 	color: inherit;
 	text-decoration: none;
-	transition: all 0.2s ease-in-out;
+	transition: all var(--transition-duration) ease-in-out;
 
 	&:hover,
 	&:focus {
-		background-color: black;
+		background-color: var(--black);
 		color: white;
 	}
 }

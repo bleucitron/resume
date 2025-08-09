@@ -38,14 +38,12 @@
 		a {
 			padding: 0.5rem;
 			box-shadow: 0 1px 5px lightgrey;
-			/* outline: 1px solid var(--grey); */
 			backdrop-filter: blur(5px);
 			border-radius: 5px;
-			transition: color box-shadow 0.5s ease-in-out;
 
 			&:hover,
 			&:focus {
-				color: black;
+				color: var(--black);
 				background: inherit;
 
 				&:not(.current) {
@@ -56,13 +54,13 @@
 
 		.current {
 			color: white;
-			background: black;
+			background: var(--black);
 			cursor: default;
 			transition: none;
 
 			&:hover {
 				color: white;
-				background: black;
+				background: var(--black);
 			}
 		}
 	}

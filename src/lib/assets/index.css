@@ -54,6 +54,13 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+
+	&:hover,
+	&:focus {
+		background-color: black;
+		color: white;
+	}
 }
 
 header,
@@ -72,10 +79,7 @@ h3 {
 .weak {
 	color: var(--grey);
 	font-weight: normal;
-}
-
-a {
-	text-decoration: none;
+	font-size: 0.9rem;
 }
 
 address {

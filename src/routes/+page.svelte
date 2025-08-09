@@ -4,8 +4,9 @@
 	import AoC from '$lib/components/AoC.svelte';
 	import Stack from '$lib/components/Stack.svelte';
 	import { isLang } from '$lib/icons';
-	import Education from '$lib/components/Education.svelte';
 	import References from '$lib/components/References.svelte';
+	import Talks from '$lib/components/Talks.svelte';
+	import Education from '$lib/components/Education.svelte';
 
 	const { data } = $props();
 
@@ -15,10 +16,11 @@
 		personal_info,
 		stack,
 		positions,
-		hobbies,
 		aoc,
-		education,
+		hobbies,
+		talks,
 		references,
+		education,
 	} = $derived(data);
 	const { name, birth_date } = $derived(personal_info);
 
@@ -58,6 +60,11 @@
 				</li>
 			{/each}
 		</ul>
+	</section>
+
+	<section>
+		<h3>Talks</h3>
+		<Talks {talks} />
 	</section>
 
 	<section>
@@ -115,13 +122,5 @@
 	address {
 		display: flex;
 		justify-content: space-between;
-
-		a {
-			&:hover,
-			&:focus {
-				background-color: black;
-				color: white;
-			}
-		}
 	}
 </style>

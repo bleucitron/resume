@@ -35,8 +35,8 @@
 		}
 
 		a {
-			&:hover {
-				color: white;
+			&:hover,
+			&:focus {
 				background: var(--grey);
 			}
 		}

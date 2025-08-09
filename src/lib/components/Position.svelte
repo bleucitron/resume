@@ -49,7 +49,7 @@
 	{/if}
 
 	{#if projects?.length}
-		<ul class="tasks">
+		<ul class="tasks weak">
 			{#each normalizedProjects as project}
 				{@const isString = typeof project === 'string'}
 				{@const description = isString ? project : project.description}
@@ -95,11 +95,11 @@
 
 		a {
 			color: var(--blue);
-			transition: all 0.2s ease-in-out;
 
-			&:hover {
-				color: white;
+			&:hover,
+			&:focus {
 				background: var(--blue);
+				color: white;
 			}
 		}
 
@@ -122,7 +122,6 @@
 		.tasks {
 			/* display: none; */
 			margin: 0;
-			font-size: 0.9rem;
 			list-style-type: circle;
 
 			a,

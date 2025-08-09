@@ -1,4 +1,5 @@
 import type { DurationObjectUnits } from 'luxon';
+import type { Lang } from './icons';
 
 export type Company = {
 	name: string;
@@ -18,4 +19,12 @@ export type Reference = {
 	position: string;
 	company: string;
 	email: string;
+};
+
+export type Talk = {
+	name: string;
+	event: { name: string; website: string };
+	date: string;
+	link?: string;
+	stack: string[];
 };

@@ -232,6 +232,42 @@
 			"company": "Beta.gouv"
 		}
 	],
+	"talks": [
+		{
+			"name": "Endiguer une épidémie d'erreurs TypeScript",
+			"event": { "name": "BordeauxJS", "website": "https://www.meetup.com/fr-FR/bordeauxjs/" },
+			"link": "https://github.com/bleucitron/ts-medicine",
+			"date": "2025-06",
+			"stack": ["typescript"]
+		},
+		{
+			"name": "Les mains dans SvelteKit",
+			"event": { "name": "BDXio", "website": "bdxio.fr" },
+			"date": "2023-12",
+			"stack": ["svelte", "sveltekit"]
+		},
+		{
+			"name": "Translating the docs",
+			"event": { "name": "Svelte Summit", "website": "https://www.sveltesummit.com/" },
+			"link": "https://www.youtube.com/watch?v=MjnLb_9lsu0",
+			"date": "2023-12",
+			"stack": ["svelte", "sveltekit"]
+		},
+		{
+			"name": "What the Svelte happened?",
+			"event": { "name": "Svelte Paris", "website": "https://www.meetup.com/fr-FR/svelte-paris/" },
+			"link": "https://github.com/bleucitron/what-the-svelte",
+			"date": "2023-06",
+			"stack": ["svelte", "sveltekit"]
+		},
+		{
+			"name": "Svelte, ou pourquoi je ne veux plus faire de React",
+			"event": { "name": "BDXio", "website": "bdxio.fr" },
+			"link": "https://www.youtube.com/watch?v=KaGatRnxxyU",
+			"date": "2022-12",
+			"stack": ["svelte"]
+		}
+	],
 	"education": [
 		{
 			"title": "Mastère spécialisé \"Structures aéronautiques et spatiales\"",

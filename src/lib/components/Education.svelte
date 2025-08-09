@@ -20,7 +20,7 @@
 	{#each education as { title, school, location, to, info } (school)}
 		{@const year = DateTime.fromISO(to).year}
 		<li class="course">
-			<div><span>{year}.</span> {title} <span class="school">{school} ({location})</span></div>
+			<div><span>{year}.</span> {title} <span class="weak">{school} ({location})</span></div>
 			{#if info}<div class="info"><span>└</span> {info}</div>{/if}
 		</li>
 	{/each}
@@ -45,10 +45,6 @@
 			span {
 				font-style: normal;
 			}
-		}
-
-		.school {
-			font-size: 0.9rem;
 		}
 	}
 </style>

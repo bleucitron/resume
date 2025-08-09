@@ -27,6 +27,12 @@
 
 <style>
 	.Header {
+		margin-bottom: 2rem;
+
+		@media print {
+			margin-bottom: 1rem;
+		}
+
 		section {
 			display: flex;
 			justify-content: space-between;
@@ -53,10 +59,6 @@
 		div:has(h2) {
 			display: flex;
 			align-items: end;
-
-			p {
-				margin: 0;
-			}
 		}
 
 		ul {

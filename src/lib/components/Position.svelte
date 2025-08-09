@@ -38,7 +38,8 @@
 	<header>
 		<h4>
 			<span class="title">{title}</span>
-			{#if company}<span class="weak">chez</span> <a href={company.website}>{company.name}</a>{/if}
+			{#if company}<span class="weak">chez</span>
+				<a href={company.website} target="_blank" rel="noopener noreferrer">{company.name}</a>{/if}
 		</h4>
 		<Period {from} {to} />
 	</header>
@@ -88,8 +89,7 @@
 			}
 		}
 
-		h4,
-		p {
+		h4 {
 			margin: 0;
 		}
 

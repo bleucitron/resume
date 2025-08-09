@@ -22,7 +22,7 @@
 		references,
 		education,
 	} = $derived(data);
-	const { name, birth_date } = $derived(personal_info);
+	const { name, birth_date, github, email, city, country } = $derived(personal_info);
 
 	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
 
@@ -79,9 +79,15 @@
 </main>
 <footer>
 	<address>
-		<a href="https://github.com/bleucitron">@bleucitron</a><br />
-		<a href="mailto:rcrestey@gmail.com">rcrestey@gmail.com</a><br />
-		<a href="tel:+33643505643">+33 (0) 6 43 50 56 43</a>
+		<p class="name">Romain Crestey</p>
+		<p>
+			<a href="https://github.com/bleucitron" target="_blank" rel="noopener noreferrer"
+				><i class="nf nf-dev-github"></i>{github}</a
+			>
+		</p>
+		<p><a href="mailto:rcrestey@gmail.com">{email}</a></p>
+		<!-- <p><a href="tel:+33643505643">{phone_number}</a></p> -->
+		<p>{city}, {country}</p>
 	</address>
 </footer>
 
@@ -105,6 +111,8 @@
 	.hobbies {
 		list-style-type: hiragana-iroha;
 		padding-left: 2rem;
+
+		break-after: page;
 	}
 
 	.hobby {
@@ -116,11 +124,32 @@
 	}
 
 	footer {
+		margin-top: 15rem;
 		color: var(--grey);
+
+		@media print {
+			margin-top: 30rem;
+		}
 	}
 
 	address {
-		display: flex;
-		justify-content: space-between;
+		text-align: right;
+
+		.name {
+			color: black;
+			font-size: 1.5rem;
+			font-family: var(--title-font);
+			line-height: 0.65;
+			border-bottom: 1px solid;
+			border-image-slice: 1;
+			border-image-source: linear-gradient(to right, white 10%, var(--grey) 70%, black);
+			margin-bottom: 0.2rem;
+		}
+
+		a {
+			display: inline-flex;
+			align-items: anchor-center;
+			gap: 0.2rem;
+		}
 	}
 </style>

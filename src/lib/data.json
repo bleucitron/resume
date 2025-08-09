@@ -8,7 +8,8 @@
 		"address": "80 rue Faugères",
 		"zip_code": 33130,
 		"city": "Bègles",
-		"phone_number": "+33 (0)6 43 50 56 43",
+		"country": "France",
+		"phone_number": "06 43 50 56 43",
 		"github": "bleucitron"
 	},
 	"stack": ["svelte", "typescript", "nodejs", "git", "neovim"],

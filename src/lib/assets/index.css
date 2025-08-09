@@ -32,9 +32,6 @@ html {
 }
 
 body {
-	display: flex;
-	flex-flow: column;
-	gap: 2rem;
 	width: 120ch;
 	margin: auto;
 	padding: 4rem 10ch;
@@ -49,6 +46,10 @@ body {
 		height: 29.7cm;
 		padding: 0;
 	}
+}
+
+p {
+	margin: 0;
 }
 
 a {

@@ -18,21 +18,14 @@
 
 	const duration = $derived(
 		durationObject && Duration.fromObject(durationObject).reconfigure({ locale: 'fr' }),
-		// Duration.fromObject(durationObject).shiftTo('years').reconfigure({ locale: 'fr' }),
 	);
-
-	$inspect('duration', duration?.toObject());
 
 	const formattedDuration = $derived(
 		duration?.toHuman({
 			listStyle: 'short',
-			// minimumFractionDigits: 1,
 			maximumSignificantDigits: 1,
-			// roundingMode: 'halfExpand',
 		}),
 	);
-	// const formattedDuration = new Intl.DurationFormat('fr-FR', { style: 'long' }).format(duration);
-	$inspect(formattedDuration, parseFloat(formattedDuration?.replace(',', '.') ?? ''));
 </script>
 
 <time class="Period" title={formattedDuration}>

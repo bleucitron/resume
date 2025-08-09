@@ -5,8 +5,6 @@
 
 	const msToYears = 1 / (1000 * 60 * 60 * 24 * 365.25);
 	const age = $derived(Math.floor((Date.now() - new Date(birth_date).getTime()) * msToYears));
-
-	$inspect(birth_date);
 </script>
 
 <header class="Header">
@@ -18,6 +16,7 @@
 
 		<h1>{title}</h1>
 	</section>
+
 	<ul class="weak">
 		{#each description as line}
 			<li>{line}</li>

@@ -37,7 +37,7 @@
 <Menu />
 <Header {name} {birth_date} {title} {description} />
 
-<main>
+<main class={{ short }}>
 	<section class="stack">
 		<h3>Stack</h3>
 
@@ -100,7 +100,14 @@
 <style>
 	h3 {
 		font-size: 1.7rem;
-		margin-block: 1.5rem 1rem;
+	}
+
+	main.short {
+		h3 {
+			@media print {
+				margin-block: 1.5rem 1rem;
+			}
+		}
 	}
 
 	li {
@@ -137,6 +144,10 @@
 	footer {
 		margin-top: 15rem;
 		color: var(--grey);
+
+		@media print {
+			margin-top: 30rem;
+		}
 
 		&.short {
 			margin-top: 5rem;

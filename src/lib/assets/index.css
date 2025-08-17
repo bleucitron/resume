@@ -77,7 +77,7 @@ footer {
 h1,
 h2,
 h3 {
-	margin-block: 2.5rem 1rem;
+	margin-block: 3rem 1rem;
 	font-family: var(--title-font);
 }
 

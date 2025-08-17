@@ -29,7 +29,7 @@
 		margin-bottom: 2rem;
 
 		@media print {
-			margin-bottom: 1rem;
+			margin-bottom: 0;
 		}
 
 		section {

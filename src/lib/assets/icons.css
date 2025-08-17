@@ -8,10 +8,18 @@
 
 .nf-dev-typescript {
 	color: #3078c6;
+
+	@media print {
+		color: darkblue;
+	}
 }
 
 .nf-dev-javascript {
 	color: #f7e01c;
+
+	@media print {
+		color: orange;
+	}
 }
 
 .nf-dev-graphql {
@@ -106,7 +114,7 @@
 	background-clip: text;
 
 	@media print {
-		color: var(--playwright-w);
+		color: var(--playwright-1);
 	}
 }
 

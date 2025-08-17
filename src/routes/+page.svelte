@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/state';
+
 	import Header from '$lib/components/Header.svelte';
 	import Position from '$lib/components/Position.svelte';
 	import AoC from '$lib/components/AoC.svelte';
@@ -8,6 +10,8 @@
 	import Talks from '$lib/components/Talks.svelte';
 	import Education from '$lib/components/Education.svelte';
 	import Menu from '$lib/components/Menu.svelte';
+
+	const short = $derived(page.url.searchParams.get('short'));
 
 	const { data } = $props();
 
@@ -49,7 +53,7 @@
 
 	<section>
 		<h3>Fun</h3>
-		<ul class="hobbies">
+		<ul class={['hobbies', { continue: short }]}>
 			<li class="hobby">
 				<span><AoC instances={aoc} /><Stack stack={aocStack} /></span>
 			</li>
@@ -69,7 +73,7 @@
 		<Talks {talks} />
 	</section>
 
-	<section>
+	<section class={{ hidden: short }}>
 		<h3>Références</h3>
 		<References {references} />
 	</section>
@@ -79,7 +83,7 @@
 		<Education {education} />
 	</section>
 </main>
-<footer>
+<footer class={{ short }}>
 	<address>
 		<p class="name">Romain Crestey</p>
 		<p>
@@ -96,6 +100,7 @@
 <style>
 	h3 {
 		font-size: 1.7rem;
+		margin-block: 1.5rem 1rem;
 	}
 
 	li {
@@ -115,6 +120,10 @@
 		padding-left: 2rem;
 
 		break-after: page;
+
+		&.continue {
+			break-after: unset;
+		}
 	}
 
 	.hobby {
@@ -129,9 +138,17 @@
 		margin-top: 15rem;
 		color: var(--grey);
 
-		@media print {
-			margin-top: 30rem;
+		&.short {
+			margin-top: 5rem;
+
+			@media print {
+				margin-top: 2.3rem;
+			}
 		}
+
+		/* @media print { */
+		/* 	margin-top: 30rem; */
+		/* } */
 	}
 
 	address {
@@ -139,7 +156,7 @@
 
 		.name {
 			color: var(--black);
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 			font-family: var(--title-font);
 			line-height: 0.65;
 			border-bottom: 1px solid;

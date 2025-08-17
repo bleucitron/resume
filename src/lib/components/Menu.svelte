@@ -5,7 +5,7 @@
 	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
 </script>
 
-<menu>
+<menu class="Menu">
 	<section>
 		<a href=".?short=true" class={{ current: short }} data-sveltekit-noscroll>résumé</a>
 		<a href="." class={{ current: !short }} data-sveltekit-noscroll>détaillé</a>
@@ -18,7 +18,7 @@
 </menu>
 
 <style>
-	menu {
+	.Menu {
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -62,6 +62,10 @@
 				color: white;
 				background: var(--black);
 			}
+		}
+
+		@media print {
+			display: none;
 		}
 	}
 </style>

@@ -35,7 +35,7 @@ html {
 }
 
 body {
-	width: 120ch;
+	max-width: 120ch;
 	margin: auto;
 	padding: 4rem 10ch;
 	color: var(--black);

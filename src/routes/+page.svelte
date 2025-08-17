@@ -53,7 +53,7 @@
 
 	<section>
 		<h3>Fun</h3>
-		<ul class={['hobbies', { continue: short }]}>
+		<ul class="hobbies">
 			<li class="hobby">
 				<span><AoC instances={aoc} /><Stack stack={aocStack} /></span>
 			</li>
@@ -67,6 +67,9 @@
 			{/each}
 		</ul>
 	</section>
+
+	<div class={['dots', { break: !short }]}>•••</div>
+	<div class="dots">•••</div>
 
 	<section>
 		<h3>Talks</h3>
@@ -125,12 +128,6 @@
 	.hobbies {
 		list-style-type: hiragana-iroha;
 		padding-left: 2rem;
-
-		break-after: page;
-
-		&.continue {
-			break-after: unset;
-		}
 	}
 
 	.hobby {
@@ -138,6 +135,21 @@
 			display: inline-flex;
 			justify-content: space-between;
 			width: 100%;
+		}
+	}
+
+	.dots {
+		display: none;
+		color: var(--grey);
+		break-after: unset;
+
+		&.break {
+			break-after: page;
+			text-align: right;
+		}
+
+		@media print {
+			display: revert;
 		}
 	}
 

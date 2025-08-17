@@ -49,11 +49,11 @@
 			"stack": ["svelte", "sveltekit", "react", "typescript", "javascript", "nodejs"],
 			"projects": [
 				{
-					"description": "Cours de M1 et M2, suivi de projet (XXX heures, XXX élèves)",
+					"description": "Cours de M1 et M2, suivi de projet (500+ heures, 130+ élèves)",
 					"client": { "name": "ECV Digital", "website": "https://www.ecv.fr/digital" }
 				},
 				{
-					"description": "Sessions de Formation Continue (XXX heures, XXX élèves)",
+					"description": "Sessions de Formation Continue (750+ heures, 200+ personnes)",
 					"client": { "name": "Human Coders", "website": "https://www.humancoders.com" }
 				}
 			],

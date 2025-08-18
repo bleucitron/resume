@@ -116,7 +116,7 @@
 
 			div {
 				border-radius: 50%;
-				background: black;
+				background: var(--black);
 				aspect-ratio: 1 / 1;
 			}
 		}

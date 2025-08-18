@@ -69,7 +69,7 @@
 	</section>
 
 	<div class={['dots', { break: !short }]}>•••</div>
-	<div class="dots">•••</div>
+	<div class={['dots', { break: !short }]}>•••</div>
 
 	<section>
 		<h3>Talks</h3>
@@ -144,12 +144,14 @@
 		break-after: unset;
 
 		&.break {
-			break-after: page;
-			text-align: right;
-		}
+			&:first-of-type {
+				break-after: page;
+				text-align: right;
+			}
 
-		@media print {
-			display: revert;
+			@media print {
+				display: revert;
+			}
 		}
 	}
 

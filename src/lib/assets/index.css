@@ -38,7 +38,7 @@ html {
 }
 
 body {
-	max-width: 120ch;
+	max-width: 105ch;
 	margin: auto;
 	padding: 4rem 10ch;
 	color: var(--black);

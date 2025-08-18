@@ -160,7 +160,7 @@
 	}
 
 	footer {
-		margin-top: 15rem;
+		margin-top: 10rem;
 		color: var(--grey);
 
 		@media print {
@@ -168,8 +168,6 @@
 		}
 
 		&.short {
-			margin-top: 5rem;
-
 			@media print {
 				margin-top: 2.3rem;
 			}

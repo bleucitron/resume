@@ -32,6 +32,9 @@
 
 html {
 	/* background: lightgrey; */
+	@media screen and (max-width: 840px) {
+		font-size: 0.9rem;
+	}
 }
 
 body {
@@ -44,6 +47,13 @@ body {
 
 	/* background: lightgrey; */
 	/* outline: 1px dashed orange; */
+
+	@media screen and (max-width: 1024px) {
+		padding-inline: 4rem;
+	}
+	@media screen and (max-width: 840px) {
+		padding-inline: 2.5rem;
+	}
 
 	@media print {
 		width: 21cm;
@@ -79,6 +89,15 @@ h2,
 h3 {
 	margin-block: 3rem 1rem;
 	font-family: var(--title-font);
+}
+
+li:not(.task) {
+	@media screen and (max-width: 840px) {
+		margin-block: 0.5rem;
+	}
+	@media screen and (max-width: 840px) {
+		margin-block: 0.8rem;
+	}
 }
 
 .weak {

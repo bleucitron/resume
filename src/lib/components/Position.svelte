@@ -59,7 +59,7 @@
 				{@const description = isString ? project : project.description}
 				{@const client = isString ? undefined : project.client}
 				{@const duration = isString ? undefined : project.duration}
-				<li>
+				<li class="task">
 					{description}
 
 					{#if client}pour
@@ -75,6 +75,10 @@
 	.Position {
 		color: var(--grey);
 		margin-block: 1rem;
+
+		@media screen and (max-width: 1024px) {
+			margin-bottom: 2.5rem;
+		}
 
 		header {
 			display: flex;
@@ -113,6 +117,11 @@
 			font-size: 0.9rem;
 			color: var(--black);
 
+			@media screen and (max-width: 1024px) {
+				display: flex;
+				flex-flow: column;
+			}
+
 			p::before {
 				content: '❯';
 				color: var(--blue);
@@ -129,6 +138,10 @@
 			a,
 			:global(time) {
 				opacity: 0.9;
+			}
+
+			@media screen and (max-width: 840px) {
+				padding-left: 1rem;
 			}
 		}
 

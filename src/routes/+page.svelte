@@ -123,6 +123,10 @@
 		display: flex;
 		gap: 1rem;
 		align-items: baseline;
+
+		@media screen and (max-width: 700px) {
+			display: revert;
+		}
 	}
 
 	.hobbies {
@@ -174,6 +178,12 @@
 		/* @media print { */
 		/* 	margin-top: 30rem; */
 		/* } */
+		@media screen and (max-width: 1024px) {
+			margin-top: 10rem;
+		}
+		@media screen and (max-width: 700px) {
+			margin-top: 5rem;
+		}
 	}
 
 	address {

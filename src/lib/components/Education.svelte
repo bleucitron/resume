@@ -35,6 +35,10 @@
 			span {
 				color: var(--grey);
 			}
+
+			@media screen and (max-width: 840px) {
+				margin-block: 1rem;
+			}
 		}
 
 		.info {

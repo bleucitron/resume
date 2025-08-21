@@ -4,6 +4,7 @@
 	"personal_info": {
 		"name": "Romain Crestey",
 		"birth_date": "1985-12-31T00:00:00.000Z",
+		"nationality": "française",
 		"email": "rcrestey@gmail.com",
 		"address": "80 rue Faugères",
 		"zip_code": 33130,

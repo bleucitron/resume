@@ -1,7 +1,19 @@
 <script lang="ts">
-	type Props = { title: string; description: string[]; name: string; birth_date: string };
+	import { page } from '$app/state';
 
-	const { title, description, name, birth_date }: Props = $props();
+	import { t } from '$lib/i18n';
+
+	type Props = {
+		title: string;
+		description: string[];
+		name: string;
+		birth_date: string;
+		nationality: string;
+	};
+
+	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
+
+	const { title, description, name, birth_date, nationality }: Props = $props();
 
 	const msToYears = 1 / (1000 * 60 * 60 * 24 * 365.25);
 	const age = $derived(Math.floor((Date.now() - new Date(birth_date).getTime()) * msToYears));
@@ -11,7 +23,10 @@
 	<section>
 		<div>
 			<h2>{name}</h2>
-			<p class="weak">{age} ans</p>
+			<div>
+				<p class="weak">{age} {t('ans', lang)}</p>
+				{#if lang !== 'fr'}<p class="weak">{nationality}</p>{/if}
+			</div>
 		</div>
 
 		<h1>{title}</h1>

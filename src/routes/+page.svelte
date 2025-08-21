@@ -10,8 +10,10 @@
 	import Talks from '$lib/components/Talks.svelte';
 	import Education from '$lib/components/Education.svelte';
 	import Menu from '$lib/components/Menu.svelte';
+	import { t } from '$lib/i18n';
 
 	const short = $derived(page.url.searchParams.get('short'));
+	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
 
 	const { data } = $props();
 
@@ -27,7 +29,7 @@
 		references,
 		education,
 	} = $derived(data);
-	const { name, birth_date, github, email, city, country } = $derived(personal_info);
+	const { name, birth_date, github, email, city, country, nationality } = $derived(personal_info);
 
 	const aocStack = $derived(aoc.map((instance) => instance.lang).filter(isLang));
 
@@ -35,7 +37,7 @@
 </script>
 
 <Menu />
-<Header {name} {birth_date} {title} {description} />
+<Header {name} {birth_date} {title} {description} {nationality} />
 
 <main class={{ short }}>
 	<section class="stack">
@@ -44,7 +46,7 @@
 		<Stack {stack} verbose --margin="0 auto" --font-size="1.1rem" />
 	</section>
 	<section>
-		<h3>Expériences</h3>
+		<h3>{t('expériences', lang)}</h3>
 
 		{#each positions as position (position.from + position.to)}
 			<Position {...position} />
@@ -77,12 +79,12 @@
 	</section>
 
 	<section class={{ hidden: short }}>
-		<h3>Références</h3>
+		<h3>{t('références', lang)}</h3>
 		<References {references} />
 	</section>
 
 	<section>
-		<h3>Formation</h3>
+		<h3>{t('formation', lang)}</h3>
 		<Education {education} />
 	</section>
 </main>
@@ -103,6 +105,7 @@
 <style>
 	h3 {
 		font-size: 1.7rem;
+		text-transform: capitalize;
 	}
 
 	main.short {

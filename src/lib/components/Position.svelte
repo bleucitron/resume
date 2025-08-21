@@ -1,11 +1,13 @@
 <script lang="ts">
 	import type { Company, Project } from '$lib/types';
 
+	import { page } from '$app/state';
 	import { Duration } from 'luxon';
+
+	import { t } from '$lib/i18n';
 
 	import Period from './Period.svelte';
 	import Stack from './Stack.svelte';
-	import { page } from '$app/state';
 
 	type Props = {
 		title: string;
@@ -16,6 +18,8 @@
 		projects?: Project[];
 		stack?: string[];
 	};
+
+	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
 
 	const { title, description, company, from, to, projects = [], stack = [] }: Props = $props();
 
@@ -41,7 +45,7 @@
 	<header>
 		<h4>
 			<span class="title">{title}</span>
-			{#if company}<span class="weak">chez</span>
+			{#if company}<span class="weak">{t('chez', lang)}</span>
 				<a href={company.website} target="_blank" rel="noopener noreferrer">{company.name}</a>{/if}
 		</h4>
 		<Period {from} {to} />
@@ -62,9 +66,9 @@
 				<li class="task">
 					{description}
 
-					{#if client}pour
+					{#if client}{t('pour', lang)}
 						<a href={client.website} target="_blank" rel="noopener noreferrer">{client.name}</a
-						>{/if}{#if duration}, pendant <Period {duration} />{/if}
+						>{/if}{#if duration}, {t('pendant', lang)} <Period {duration} />{/if}
 				</li>
 			{/each}
 		</ul>

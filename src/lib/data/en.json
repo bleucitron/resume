@@ -1,0 +1,304 @@
+{
+	"title": "Senior Web Developer",
+	"description": ["fluent in english and spanish", "has a thing for cheesecakes"],
+	"personal_info": {
+		"name": "Romain Crestey",
+		"birth_date": "1985-12-31T00:00:00.000Z",
+		"nationality": "french",
+		"email": "rcrestey@gmail.com",
+		"address": "80 rue Faugères",
+		"zip_code": 33130,
+		"city": "Bègles",
+		"country": "France",
+		"phone_number": "+33 (0) 6 43 50 56 43",
+		"github": "bleucitron"
+	},
+	"stack": ["svelte", "typescript", "nodejs", "git", "neovim"],
+	"positions": [
+		{
+			"company": {
+				"name": "Radiofrance",
+				"website": "https://www.radiofrance.fr"
+			},
+			"title": "Senior fullstack web developer",
+			"description": "Development of the French national radio broadcaster unified platform",
+			"projects": [
+				"Optimised the global Backend-For-Frontend architecture of the platform",
+				"Optimised data loading architecture via GraphQL",
+				"Developed the \"Ma Saison Radio\" interactive experience",
+				"Set up strategies to clean 900+ TypeScript errors",
+				"Refactored the client-side tracking system",
+				"Maintained e2e and unit tests, set up a custom mocking system",
+				"Maintained and optimised the CI pipeline"
+			],
+			"stack": [
+				"svelte",
+				"sveltekit",
+				"typescript",
+				"nodejs",
+				"graphql",
+				"vitest",
+				"playwright",
+				"git",
+				"neovim"
+			],
+			"from": "2023-01"
+		},
+		{
+			"title": "Web development instructor",
+			"description": "Training sessions on Svelte/Kit, JavaScript, React, and DSA",
+			"stack": ["svelte", "sveltekit", "react", "typescript", "javascript", "nodejs"],
+			"projects": [
+				{
+					"description": "Graduate sessions (500+ hours, 130+ trainees)",
+					"client": { "name": "ECV Digital", "website": "https://www.ecv.fr/digital" }
+				},
+				{
+					"description": "Professional sessions (750+ hours, 200+ trainees)",
+					"client": { "name": "Human Coders", "website": "https://www.humancoders.com" }
+				}
+			],
+			"from": "2017-01"
+		},
+		{
+			"company": {
+				"name": "MAPi",
+				"website": "https://mesaidespubliques.infogreffe.fr"
+			},
+			"title": "Senior frontend web developer",
+			"description": "Development of a fintech web app",
+			"projects": ["Optimised data loading", "Migrated from Sapper to SvelteKit"],
+			"stack": ["svelte", "sveltekit", "typescript", "nodejs", "vitest", "cypress", "git"],
+			"from": "2020-10",
+			"to": "2022-11"
+		},
+		{
+			"company": {
+				"name": "NaturalPad",
+				"website": "https://www.naturalpad.fr"
+			},
+			"title": "Senior web developer",
+			"description": "Various web-related developments",
+			"projects": [
+				"Maintained the flagship product, Medimoov, a therapeutic game platform",
+				"Prototyped Medimoov v2 with React and Electron",
+				"Developed various informational websites dedicated to healthcare"
+			],
+			"stack": ["react", "nextjs", "typescript", "nodejs", "vitest", "git"],
+			"from": "2019-06",
+			"to": "2020-07"
+		},
+		{
+			"title": "Freelancer",
+			"description": "Various web and mobile developments",
+			"from": "2017-01",
+			"to": "2019-06",
+			"stack": ["haxe", "react", "javascript", "git"],
+			"projects": [
+				{
+					"description": "TV-embedded video streaming platform",
+					"client": { "name": "Telecine", "website": "https://www.telecine.com.br" },
+					"duration": {
+						"months": 5
+					},
+					"stack": ["haxe", "react"]
+				},
+				{
+					"description": "Real-estate web platform",
+					"client": { "name": "Nexity", "website": "https://www.nexity.fr" },
+					"duration": {
+						"months": 5
+					},
+					"stack": ["react", "typescript"]
+				},
+				{
+					"description": "Mobile app for recipes",
+					"client": { "name": "Magimix", "website": "https://www.magimix.fr" },
+					"duration": {
+						"months": 5
+					},
+					"stack": ["haxe", "react"]
+				},
+				{
+					"description": "Online shop mobile app",
+					"client": { "name": "Veditech", "website": "https://www.veditec.net" },
+					"duration": {
+						"months": 3
+					},
+					"stack": ["haxe", "react"]
+				},
+				{
+					"description": "Independent purchase assistant via browser extension",
+					"client": {
+						"name": "Le Même en mieux",
+						"website": "https://www.lmem.net"
+					},
+					"duration": {
+						"weeks": 3
+					},
+					"stack": ["react"]
+				},
+				{
+					"description": "Management platform and store for farmers",
+					"client": { "name": "Cagette.net", "website": "https://www.cagette.net" },
+					"duration": {
+						"weeks": 1
+					},
+					"stack": ["react"]
+				}
+			]
+		},
+		{
+			"company": {
+				"name": "Ants"
+			},
+			"title": "Associate developer",
+			"description": "Development of innovative projects for the public good",
+			"projects": [
+				"Affluence prediction in recycling centers and on beaches",
+				"Browser-based 3D visualisation of the city of Bordeaux"
+			],
+			"stack": [
+				"react",
+				"javascript",
+				"typescript",
+				"nodejs",
+				"threejs",
+				"python",
+				"postgresql",
+				"git"
+			],
+			"from": "2015-01",
+			"to": "2016-11"
+		},
+		{
+			"company": {
+				"name": "Ingéliance",
+				"website": "https://ingeliance.com/"
+			},
+			"description": "Another life...",
+			"title": "Dynamics engineer specialised in aerostructures",
+			"from": "2010-09",
+			"to": "2014-05",
+			"stack": ["plane"]
+		}
+	],
+	"languages": [
+		{
+			"name": "french",
+			"level": "native"
+		},
+		{
+			"name": "english",
+			"level": "fluent"
+		},
+		{
+			"name": "spanish",
+			"level": "fluent"
+		}
+	],
+	"hobbies": [
+		"Maintaining french version of Svelte and SvelteKit documentation",
+		"Reading too many comic books",
+		"Lindy Hop dancing",
+		"Playing guitar and drawing on the occasion"
+	],
+	"aoc": [
+		{ "year": 2023, "lang": "lua", "score": 42 },
+		{ "year": 2022, "lang": "javascript", "score": 50 },
+		{ "year": 2020, "lang": "rust", "score": 50 }
+	],
+	"references": [
+		{
+			"name": "Khalid Slimani",
+			"email": "khalid.slimani@radiofrance.fr",
+			"position": "WebRF team leader",
+			"company": "Radiofrance"
+		},
+		{
+			"name": "Arnaud Guillotin",
+			"email": "arnaud@mesaidespubliques.fr",
+			"position": "CTO",
+			"company": "MAPi"
+		},
+		{
+			"name": "Antoine Seilles",
+			"email": "antoine@naturalpad.fr",
+			"position": "CEO",
+			"company": "NaturalPad"
+		},
+		{
+			"name": "David Bruant",
+			"email": "davidbruant@protonmail.com",
+			"position": "Freelancer",
+			"company": "Beta.gouv"
+		}
+	],
+	"talks": [
+		{
+			"name": "How to stop a TS errors epidemic [fr]",
+			"event": { "name": "BordeauxJS", "website": "https://www.meetup.com/fr-FR/bordeauxjs/" },
+			"link": "https://github.com/bleucitron/ts-medicine",
+			"date": "2025-06",
+			"stack": ["typescript"]
+		},
+		{
+			"name": "Get your hands on SvelteKit [fr]",
+			"event": { "name": "BDXio", "website": "bdxio.fr" },
+			"date": "2023-12",
+			"stack": ["svelte", "sveltekit"]
+		},
+		{
+			"name": "Translating the docs",
+			"event": { "name": "Svelte Summit", "website": "https://www.sveltesummit.com/" },
+			"link": "https://www.youtube.com/watch?v=MjnLb_9lsu0",
+			"date": "2023-12",
+			"stack": ["svelte", "sveltekit"]
+		},
+		{
+			"name": "What the Svelte happened?",
+			"event": { "name": "Svelte Paris", "website": "https://www.meetup.com/fr-FR/svelte-paris/" },
+			"link": "https://github.com/bleucitron/what-the-svelte",
+			"date": "2023-06",
+			"stack": ["svelte", "sveltekit"]
+		},
+		{
+			"name": "Svelte, or why i stopped writing React [fr]",
+			"event": { "name": "BDXio", "website": "bdxio.fr" },
+			"link": "https://www.youtube.com/watch?v=KaGatRnxxyU",
+			"date": "2022-12",
+			"stack": ["svelte"]
+		}
+	],
+	"education": [
+		{
+			"title": "Aeronautical Structures post-graduate course",
+			"school": "ISAE",
+			"location": "Toulouse",
+			"from": "2009-09",
+			"to": "2010-08"
+		},
+		{
+			"title": "Mechanical engineering graduation",
+			"school": "École Centrale Méditerrannée",
+			"location": "Marseille",
+			"info": "including 2 years of Erasmus courses in Madrid, Spain",
+			"from": "2004-09",
+			"to": "2009-06"
+		},
+		{
+			"title": "MPSI/MP preparatory classes graduation",
+			"school": "Lycée Pierre de Fermat",
+			"location": "Toulouse",
+			"from": "2002-09",
+			"to": "2004-06"
+		},
+		{
+			"title": "A-levels equivalent, specialised in Mathematics",
+			"school": "Lycée Ozenne",
+			"location": "Toulouse",
+			"from": "1999-09",
+			"to": "2002-06"
+		}
+	]
+}

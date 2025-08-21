@@ -1,23 +1,28 @@
 <script lang="ts">
 	import { DateTime, Duration, type DurationObjectUnits } from 'luxon';
 
+	import { t } from '$lib/i18n';
+	import { page } from '$app/state';
+
 	type Props = {
 		from?: string;
 		to?: string;
 		duration?: DurationObjectUnits;
 	};
 
+	const locale = $derived(page.url.searchParams.get('lang') ?? 'fr');
+
 	const { from, to, duration: d }: Props = $props();
 
-	const fromDate = $derived(from ? DateTime.fromISO(from, { locale: 'fr' }) : undefined);
-	const toDate = $derived(to ? DateTime.fromISO(to, { locale: 'fr' }) : undefined);
+	const fromDate = $derived(from ? DateTime.fromISO(from, { locale }) : undefined);
+	const toDate = $derived(to ? DateTime.fromISO(to, { locale }) : undefined);
 
 	const durationObject = $derived(
 		d ?? (fromDate && (toDate ?? DateTime.now()).diff(fromDate, ['years', 'months']).toObject()),
 	);
 
 	const duration = $derived(
-		durationObject && Duration.fromObject(durationObject).reconfigure({ locale: 'fr' }),
+		durationObject && Duration.fromObject(durationObject).reconfigure({ locale }),
 	);
 
 	const formattedDuration = $derived(
@@ -30,11 +35,11 @@
 
 <time class="Period" title={formattedDuration}>
 	{#if fromDate && toDate}
-		<span class="weak">de</span>
-		{fromDate.year} <span class="weak">à</span>
+		<span class="weak">{t('de', locale)}</span>
+		{fromDate.year} <span class="weak">{t('à', locale)}</span>
 		{toDate.year}<span class="weak"></span>
 	{:else if fromDate}
-		<span class="weak">depuis</span>
+		<span class="weak">{t('depuis', locale)}</span>
 		{fromDate.year}
 	{:else if d}
 		{formattedDuration}

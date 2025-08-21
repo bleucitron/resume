@@ -1,5 +1,6 @@
-import data from '$lib/data.json';
+export async function load({ url }) {
+	const lang = url.searchParams.get('lang') ?? 'fr';
 
-export function load() {
+	const data = await import(`$lib/data/${lang}.json`);
 	return { ...data };
 }

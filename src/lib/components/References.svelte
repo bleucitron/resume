@@ -2,12 +2,14 @@
 	import type { Reference } from '$lib/types';
 
 	import { page } from '$app/state';
+	import { t } from '$lib/i18n';
 
 	type Props = {
 		references: Reference[];
 	};
 
 	const short = $derived(page.url.searchParams.get('short'));
+	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
 
 	const { references }: Props = $props();
 </script>
@@ -19,7 +21,7 @@
 				<span class="name">{name}</span>
 				<a href="mailto:{email}">{email}</a>
 			</address>
-			<p class={{ hidden: short }}>└ {position} chez {company}</p>
+			<p class={{ hidden: short }}>└ {position} {t('chez', lang)} {company}</p>
 		</li>
 	{/each}
 </ul>

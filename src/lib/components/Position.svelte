@@ -4,7 +4,7 @@
 	import { page } from '$app/state';
 	import { Duration } from 'luxon';
 
-	import { t } from '$lib/i18n';
+	import { getTranslationContext } from '$lib/i18n';
 
 	import Period from './Period.svelte';
 	import Stack from './Stack.svelte';
@@ -19,7 +19,7 @@
 		stack?: string[];
 	};
 
-	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
+	const t = getTranslationContext();
 
 	const { title, description, company, from, to, projects = [], stack = [] }: Props = $props();
 
@@ -45,7 +45,7 @@
 	<header>
 		<h4>
 			<span class="title">{title}</span>
-			{#if company}<span class="weak">{t('chez', lang)}</span>
+			{#if company}<span class="weak">{t('chez')}</span>
 				<a href={company.website} target="_blank" rel="noopener noreferrer">{company.name}</a>{/if}
 		</h4>
 		<Period {from} {to} />
@@ -66,9 +66,9 @@
 				<li class="task">
 					{description}
 
-					{#if client}{t('pour', lang)}
+					{#if client}{t('pour')}
 						<a href={client.website} target="_blank" rel="noopener noreferrer">{client.name}</a
-						>{/if}{#if duration}, {t('pendant', lang)} <Period {duration} />{/if}
+						>{/if}{#if duration}, {t('pendant')} <Period {duration} />{/if}
 				</li>
 			{/each}
 		</ul>

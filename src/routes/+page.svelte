@@ -10,10 +10,11 @@
 	import Talks from '$lib/components/Talks.svelte';
 	import Education from '$lib/components/Education.svelte';
 	import Menu from '$lib/components/Menu.svelte';
-	import { t } from '$lib/i18n';
+	import { getTranslationContext } from '$lib/i18n';
 
 	const short = $derived(page.url.searchParams.get('short'));
-	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
+
+	const t = getTranslationContext();
 
 	const { data } = $props();
 
@@ -46,7 +47,7 @@
 		<Stack {stack} verbose --margin="0 auto" --font-size="1.1rem" />
 	</section>
 	<section>
-		<h3>{t('expériences', lang)}</h3>
+		<h3>{t('expériences')}</h3>
 
 		{#each positions as position (position.from + position.to)}
 			<Position {...position} />
@@ -79,12 +80,12 @@
 	</section>
 
 	<section class={{ hidden: short }}>
-		<h3>{t('références', lang)}</h3>
+		<h3>{t('références')}</h3>
 		<References {references} />
 	</section>
 
 	<section>
-		<h3>{t('formation', lang)}</h3>
+		<h3>{t('formation')}</h3>
 		<Education {education} />
 	</section>
 </main>

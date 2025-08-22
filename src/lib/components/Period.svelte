@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DateTime, Duration, type DurationObjectUnits } from 'luxon';
 
-	import { t } from '$lib/i18n';
+	import { getTranslationContext } from '$lib/i18n';
 	import { page } from '$app/state';
 
 	type Props = {
@@ -9,6 +9,8 @@
 		to?: string;
 		duration?: DurationObjectUnits;
 	};
+
+	const t = getTranslationContext();
 
 	const locale = $derived(page.url.searchParams.get('lang') ?? 'fr');
 
@@ -35,11 +37,11 @@
 
 <time class="Period" title={formattedDuration}>
 	{#if fromDate && toDate}
-		<span class="weak">{t('de', locale)}</span>
-		{fromDate.year} <span class="weak">{t('à', locale)}</span>
+		<span class="weak">{t('de')}</span>
+		{fromDate.year} <span class="weak">{t('à')}</span>
 		{toDate.year}<span class="weak"></span>
 	{:else if fromDate}
-		<span class="weak">{t('depuis', locale)}</span>
+		<span class="weak">{t('depuis')}</span>
 		{fromDate.year}
 	{:else if d}
 		{formattedDuration}

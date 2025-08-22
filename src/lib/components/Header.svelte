@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
 
-	import { t } from '$lib/i18n';
+	import { getTranslationContext } from '$lib/i18n';
+
+	const t = getTranslationContext();
 
 	type Props = {
 		title: string;
@@ -24,7 +26,7 @@
 		<div>
 			<h2>{name}</h2>
 			<div>
-				<p class="weak">{age} {t('ans', lang)}</p>
+				<p class="weak">{age} {t('ans')}</p>
 				{#if lang !== 'fr'}<p class="weak">{nationality}</p>{/if}
 			</div>
 		</div>

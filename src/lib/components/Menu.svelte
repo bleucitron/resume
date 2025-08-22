@@ -3,7 +3,9 @@
 	import { elasticOut } from 'svelte/easing';
 	import { scale } from 'svelte/transition';
 	import { scrollY } from 'svelte/reactivity/window';
-	import { t } from '$lib/i18n';
+	import { getTranslationContext } from '$lib/i18n';
+
+	const t = getTranslationContext();
 
 	const transitionParams = { duration: 600, easing: elasticOut };
 
@@ -48,10 +50,10 @@
 		<menu in:scale={transitionParams}>
 			<section>
 				<a href="?{toShort(true)}" class={{ current: short }} data-sveltekit-noscroll
-					>{t('résumé', lang)}</a
+					>{t('résumé')}</a
 				>
 				<a href="?{toShort(false)}" class={{ current: !short }} data-sveltekit-noscroll
-					>{t('détaillé', lang)}</a
+					>{t('détaillé')}</a
 				>
 			</section>
 			<section>

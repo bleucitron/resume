@@ -120,6 +120,6 @@
 
 /* @media print { */
 /* 	.nf { */
-/* 		color: lightgrey; */
+/* 		color: var(--light-grey); */
 /* 	} */
 /* } */

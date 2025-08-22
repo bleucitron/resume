@@ -87,7 +87,7 @@
 
 		a {
 			padding: 0.5rem;
-			box-shadow: 0 1px 5px lightgrey;
+			box-shadow: 0 1px 5px var(--light-grey);
 			backdrop-filter: blur(5px);
 			border-radius: 5px;
 

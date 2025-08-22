@@ -14,6 +14,8 @@
 	--blue: hsl(207 65% 49% / 1);
 	--orange: hsl(39 80% 50% / 0.85);
 	--grey: hsl(0 0 63%);
+	--light-grey: lightgrey;
+	--lighter-grey: hsl(0 0 94%);
 	--purple: #ca72e4;
 	--black: #121212;
 
@@ -31,7 +33,8 @@
 }
 
 html {
-	/* background: lightgrey; */
+	background: var(--lighter-grey);
+
 	@media screen and (max-width: 840px) {
 		font-size: 0.9rem;
 	}
@@ -42,10 +45,11 @@ body {
 	margin: auto;
 	padding: 4rem 10ch;
 	color: var(--black);
+	background: white;
 	font-family: var(--code-font);
 	line-height: 1.2;
 
-	/* background: lightgrey; */
+	/* background: var(--light-grey); */
 	/* outline: 1px dashed orange; */
 
 	@media screen and (max-width: 1024px) {

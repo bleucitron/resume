@@ -51,7 +51,7 @@
 			display: inline-flex;
 			justify-content: space-between;
 			width: 100%;
-			border-bottom: 1px dotted lightgrey;
+			border-bottom: 1px dotted var(--light-grey);
 			line-height: 0.66;
 		}
 	}

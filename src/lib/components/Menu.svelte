@@ -3,6 +3,7 @@
 	import { elasticOut } from 'svelte/easing';
 	import { scale } from 'svelte/transition';
 	import { scrollY } from 'svelte/reactivity/window';
+	import { t } from '$lib/i18n';
 
 	const transitionParams = { duration: 600, easing: elasticOut };
 
@@ -46,8 +47,12 @@
 	{#if open}
 		<menu in:scale={transitionParams}>
 			<section>
-				<a href="?{toShort(true)}" class={{ current: short }} data-sveltekit-noscroll>résumé</a>
-				<a href="?{toShort(false)}" class={{ current: !short }} data-sveltekit-noscroll>détaillé</a>
+				<a href="?{toShort(true)}" class={{ current: short }} data-sveltekit-noscroll
+					>{t('résumé', lang)}</a
+				>
+				<a href="?{toShort(false)}" class={{ current: !short }} data-sveltekit-noscroll
+					>{t('détaillé', lang)}</a
+				>
 			</section>
 			<section>
 				<a href="?{toLang('fr')}" class={{ current: lang === 'fr' }} data-sveltekit-noscroll>fr</a>

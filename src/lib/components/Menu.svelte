@@ -4,6 +4,7 @@
 	import { scale } from 'svelte/transition';
 	import { scrollY } from 'svelte/reactivity/window';
 	import { getI18n } from '$lib/i18n';
+	import { clickOutside } from '$lib/attachments';
 
 	const t = getI18n();
 
@@ -43,9 +44,7 @@
 	}
 </script>
 
-<svelte:document onclick={close} />
-
-<div class="Menu">
+<div class="Menu" {@attach clickOutside(close)}>
 	{#if open}
 		<menu in:scale={transitionParams}>
 			<section>

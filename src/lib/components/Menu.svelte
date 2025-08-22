@@ -3,16 +3,16 @@
 	import { elasticOut } from 'svelte/easing';
 	import { scale } from 'svelte/transition';
 	import { scrollY } from 'svelte/reactivity/window';
-	import { getTranslationContext } from '$lib/i18n';
+	import { getI18n } from '$lib/i18n';
 
-	const t = getTranslationContext();
+	const t = getI18n();
 
 	const transitionParams = { duration: 600, easing: elasticOut };
 
 	let open = $state(false);
 
 	const short = $derived(!!page.url.searchParams.get('short') || false);
-	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
+	const { locale } = $derived(page.data);
 
 	$effect(() => {
 		if (scrollY.current) open = false;
@@ -35,7 +35,7 @@
 		return params.toString();
 	}
 
-	function toLang(lang: 'fr' | 'en' | 'es') {
+	function toLocale(lang: 'fr' | 'en' | 'es') {
 		const params = new URL(page.url).searchParams;
 		params.set('lang', lang);
 
@@ -57,8 +57,12 @@
 				>
 			</section>
 			<section>
-				<a href="?{toLang('fr')}" class={{ current: lang === 'fr' }} data-sveltekit-noscroll>fr</a>
-				<a href="?{toLang('en')}" class={{ current: lang === 'en' }} data-sveltekit-noscroll>en</a>
+				<a href="?{toLocale('fr')}" class={{ current: locale === 'fr' }} data-sveltekit-noscroll
+					>fr</a
+				>
+				<a href="?{toLocale('en')}" class={{ current: locale === 'en' }} data-sveltekit-noscroll
+					>en</a
+				>
 				<!-- <a href={addLang('es')} class={{ current: lang === 'es' }} data-sveltekit-noscroll>es</a> -->
 			</section>
 		</menu>

@@ -3,13 +3,13 @@
 
 	import { page } from '$app/state';
 
-	import { setTranslationContext } from '$lib/i18n';
+	import { setI18n } from '$lib/i18n';
 
-	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
+	const locale = $derived(page.data.locale);
 
 	const { children } = $props();
 
-	setTranslationContext(() => lang);
+	setI18n(() => locale);
 </script>
 
 {@render children()}

@@ -10,11 +10,11 @@
 	import Talks from '$lib/components/Talks.svelte';
 	import Education from '$lib/components/Education.svelte';
 	import Menu from '$lib/components/Menu.svelte';
-	import { getTranslationContext } from '$lib/i18n';
+	import { getI18n } from '$lib/i18n';
 
 	const short = $derived(page.url.searchParams.get('short'));
 
-	const t = getTranslationContext();
+	const t = getI18n();
 
 	const { data } = $props();
 

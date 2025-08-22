@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DateTime, Duration, type DurationObjectUnits } from 'luxon';
 
-	import { getTranslationContext } from '$lib/i18n';
+	import { getI18n } from '$lib/i18n';
 	import { page } from '$app/state';
 
 	type Props = {
@@ -10,9 +10,9 @@
 		duration?: DurationObjectUnits;
 	};
 
-	const t = getTranslationContext();
+	const t = getI18n();
 
-	const locale = $derived(page.url.searchParams.get('lang') ?? 'fr');
+	const locale = $derived(page.data.locale);
 
 	const { from, to, duration: d }: Props = $props();
 

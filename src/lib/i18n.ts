@@ -16,10 +16,10 @@ function t(word: string, lang: string) {
 
 const key = Symbol('i18n');
 
-export function setTranslationContext(getLang: () => string) {
+export function setI18n(getLang: () => string) {
 	setContext(key, (s: string) => t(s, getLang()));
 }
 
-export function getTranslationContext() {
+export function getI18n() {
 	return getContext(key) as (s: string) => ReturnType<typeof t>;
 }

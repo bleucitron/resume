@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
 
-	import { getTranslationContext } from '$lib/i18n';
+	import { getI18n } from '$lib/i18n';
 
-	const t = getTranslationContext();
+	const t = getI18n();
 
 	type Props = {
 		title: string;
@@ -13,7 +13,7 @@
 		nationality: string;
 	};
 
-	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
+	const { locale } = $derived(page.data);
 
 	const { title, description, name, birth_date, nationality }: Props = $props();
 
@@ -27,7 +27,7 @@
 			<h2>{name}</h2>
 			<div>
 				<p class="weak">{age} {t('ans')}</p>
-				{#if lang !== 'fr'}<p class="weak">{nationality}</p>{/if}
+				{#if locale !== 'fr'}<p class="weak">{nationality}</p>{/if}
 			</div>
 		</div>
 

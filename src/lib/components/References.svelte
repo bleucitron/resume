@@ -2,13 +2,13 @@
 	import type { Reference } from '$lib/types';
 
 	import { page } from '$app/state';
-	import { getTranslationContext } from '$lib/i18n';
+	import { getI18n } from '$lib/i18n';
 
 	type Props = {
 		references: Reference[];
 	};
 
-	const t = getTranslationContext();
+	const t = getI18n();
 
 	const short = $derived(page.url.searchParams.get('short'));
 

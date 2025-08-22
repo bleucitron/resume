@@ -4,7 +4,7 @@
 	import { page } from '$app/state';
 	import { Duration } from 'luxon';
 
-	import { getTranslationContext } from '$lib/i18n';
+	import { getI18n } from '$lib/i18n';
 
 	import Period from './Period.svelte';
 	import Stack from './Stack.svelte';
@@ -19,7 +19,7 @@
 		stack?: string[];
 	};
 
-	const t = getTranslationContext();
+	const t = getI18n();
 
 	const { title, description, company, from, to, projects = [], stack = [] }: Props = $props();
 

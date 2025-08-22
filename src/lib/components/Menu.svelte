@@ -8,7 +8,7 @@
 
 	let open = $state(false);
 
-	const short = $derived(page.url.searchParams.get('short'));
+	const short = $derived(!!page.url.searchParams.get('short') || false);
 	const lang = $derived(page.url.searchParams.get('lang') ?? 'fr');
 
 	$effect(() => {
@@ -22,6 +22,22 @@
 	function close() {
 		open = false;
 	}
+
+	function toShort(v: boolean) {
+		const params = new URL(page.url).searchParams;
+
+		if (!v) params.delete('short');
+		else params.set('short', 'true');
+
+		return params.toString();
+	}
+
+	function toLang(lang: 'fr' | 'en' | 'es') {
+		const params = new URL(page.url).searchParams;
+		params.set('lang', lang);
+
+		return params.toString();
+	}
 </script>
 
 <svelte:document onclick={close} />
@@ -30,14 +46,14 @@
 	{#if open}
 		<menu in:scale={transitionParams}>
 			<section>
-				<a href=".?short=true" class={{ current: short }} data-sveltekit-noscroll>résumé</a>
-				<a href="." class={{ current: !short }} data-sveltekit-noscroll>détaillé</a>
+				<a href="?{toShort(true)}" class={{ current: short }} data-sveltekit-noscroll>résumé</a>
+				<a href="?{toShort(false)}" class={{ current: !short }} data-sveltekit-noscroll>détaillé</a>
 			</section>
-			<!-- <section> -->
-			<!-- 	<a href=".?lang=fr" class={{ current: lang === 'fr' }} data-sveltekit-noscroll>fr</a> -->
-			<!-- 	<a href=".?lang=en" class={{ current: lang === 'en' }} data-sveltekit-noscroll>en</a> -->
-			<!-- 	<a href=".?lang=es" class={{ current: lang === 'es' }} data-sveltekit-noscroll>es</a> -->
-			<!-- </section> -->
+			<section>
+				<a href="?{toLang('fr')}" class={{ current: lang === 'fr' }} data-sveltekit-noscroll>fr</a>
+				<a href="?{toLang('en')}" class={{ current: lang === 'en' }} data-sveltekit-noscroll>en</a>
+				<!-- <a href={addLang('es')} class={{ current: lang === 'es' }} data-sveltekit-noscroll>es</a> -->
+			</section>
 		</menu>
 	{:else}
 		<button in:scale={transitionParams} onclick={toggle} aria-labelledby="Ouvrir le menu"

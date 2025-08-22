@@ -15,10 +15,6 @@
 	const short = $derived(!!page.url.searchParams.get('short') || false);
 	const { locale } = $derived(page.data);
 
-	$effect(() => {
-		if (scrollY.current) open = false;
-	});
-
 	function toggle(e: Event) {
 		e.stopPropagation();
 		open = !open;
@@ -42,6 +38,10 @@
 
 		return params.toString();
 	}
+
+	$effect(() => {
+		if (scrollY.current) open = false;
+	});
 </script>
 
 <div class="Menu" {@attach clickOutside(close)}>

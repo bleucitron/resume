@@ -97,8 +97,12 @@ footer {
 h1,
 h2,
 h3 {
-	margin-block: 3rem 1rem;
 	font-family: var(--title-font);
+}
+
+h1,
+h2 {
+	margin-block: 3rem 1rem;
 }
 
 li:not(.task) {

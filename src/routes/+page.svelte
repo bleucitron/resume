@@ -111,8 +111,16 @@
 
 <style>
 	h3 {
+		position: sticky;
+		top: -2rem;
+		margin: 0;
+		padding-top: 3rem;
+		margin-bottom: 1rem;
 		font-size: 1.7rem;
 		text-transform: capitalize;
+		background-color: white;
+		z-index: 1;
+		box-shadow: 0px 5px 15px 5px #fff;
 
 		@media screen and (max-width: 600px) {
 			font-size: 1.4rem;
@@ -143,7 +151,7 @@
 		}
 		h3:first-of-type {
 			@media screen and (max-width: 600px) {
-				margin-top: 1rem;
+				padding-top: 1rem;
 			}
 		}
 	}

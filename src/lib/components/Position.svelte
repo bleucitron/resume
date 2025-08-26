@@ -49,9 +49,12 @@
 		<span class="info">
 			{#if company}<span class="company"
 					><span class="weak">{t('chez')}</span>
-					<a href={company.website} target="_blank" rel="noopener noreferrer">{company.name}</a
-					></span
-				>{/if}
+					{#if company.website}
+						<a href={company.website} target="_blank" rel="noopener noreferrer">{company.name}</a>
+					{:else}
+						<span>{company.name}</span>
+					{/if}
+				</span>{/if}
 			<Period {from} {to} />
 		</span>
 	</header>

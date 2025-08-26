@@ -66,8 +66,11 @@
 			</section>
 		</menu>
 	{:else}
-		<button in:scale={transitionParams} onclick={toggle} aria-labelledby="Ouvrir le menu"
-			><div></div></button
+		<button
+			in:scale={transitionParams}
+			onclick={toggle}
+			aria-labelledby="Ouvrir le menu"
+			title="Menu"><div></div></button
 		>
 	{/if}
 </div>

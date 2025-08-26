@@ -25,9 +25,7 @@
 
 	function toShort(v: boolean) {
 		const params = new URL(page.url).searchParams;
-
-		if (!v) params.delete('short');
-		else params.set('short', 'true');
+		params.set('short', v.toString());
 
 		return params.toString();
 	}

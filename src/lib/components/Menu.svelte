@@ -10,7 +10,7 @@
 
 	const transitionParams = { duration: 600, easing: elasticOut };
 
-	let open = $state(false);
+	let open = $state(true);
 
 	const short = $derived(!!page.url.searchParams.get('short') || false);
 	const { locale } = $derived(page.data);
@@ -146,6 +146,11 @@
 				background: var(--black);
 				aspect-ratio: 1 / 1;
 			}
+		}
+
+		@media screen and (max-width: 840px) {
+			bottom: 0;
+			top: unset;
 		}
 
 		@media print {

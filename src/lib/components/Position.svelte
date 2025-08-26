@@ -44,11 +44,16 @@
 <article class="Position">
 	<header>
 		<h4>
-			<span class="title">{title}</span>
-			{#if company}<span class="weak">{t('chez')}</span>
-				<a href={company.website} target="_blank" rel="noopener noreferrer">{company.name}</a>{/if}
+			{title}
 		</h4>
-		<Period {from} {to} />
+		<span class="info">
+			{#if company}<span class="company"
+					><span class="weak">{t('chez')}</span>
+					<a href={company.website} target="_blank" rel="noopener noreferrer">{company.name}</a
+					></span
+				>{/if}
+			<Period {from} {to} />
+		</span>
 	</header>
 	{#if description}<div class="description">
 			<p>{description}</p>
@@ -89,19 +94,36 @@
 			justify-content: space-between;
 			align-items: baseline;
 			margin-block: 0.2rem;
-		}
 
-		h4 {
-			color: var(--black);
-			font-weight: normal;
-
-			.title {
-				font-weight: bold;
+			@media screen and (max-width: 600px) {
+				flex-flow: column;
 			}
 		}
 
 		h4 {
+			color: var(--black);
+			font-weight: bold;
 			margin: 0;
+		}
+
+		.info {
+			flex: 1;
+			display: inline-flex;
+			justify-content: flex-end;
+			align-items: baseline;
+
+			@media screen and (max-width: 600px) {
+				justify-content: flex-start;
+				gap: 1ch;
+			}
+		}
+
+		.company {
+			margin-inline: 1ch auto;
+
+			@media screen and (max-width: 600px) {
+				margin: 0;
+			}
 		}
 
 		a {

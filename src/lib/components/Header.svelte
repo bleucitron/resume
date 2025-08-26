@@ -63,6 +63,10 @@
 			margin: 0;
 			text-align: end;
 			align-self: end;
+
+			@media screen and (max-width: 600px) {
+				font-size: 1.4rem;
+			}
 		}
 
 		h2 {
@@ -70,6 +74,10 @@
 			font-size: 3rem;
 			line-height: 0.66;
 			margin-block: 0.5rem;
+
+			@media screen and (max-width: 600px) {
+				font-size: 1.9rem;
+			}
 		}
 
 		div:has(h2) {

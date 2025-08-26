@@ -12,7 +12,7 @@
 	const cleanStack = $derived(stack.filter(isLang));
 </script>
 
-<div class="Stack">
+<div class={['Stack', { verbose }]}>
 	{#each cleanStack as id (id)}
 		<Lang {id} {verbose} />
 	{/each}
@@ -34,6 +34,14 @@
 			justify-content: center;
 			font-size: inherit;
 			margin-block: 0.2rem;
+		}
+
+		&.verbose {
+			@media screen and (max-width: 600px) {
+				flex-flow: column;
+				align-items: center;
+				margin: 0;
+			}
 		}
 	}
 </style>

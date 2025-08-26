@@ -29,6 +29,7 @@
 		talks,
 		references,
 		education,
+		seo,
 	} = $derived(data);
 	const { name, birth_date, github, email, city, country, nationality } = $derived(personal_info);
 
@@ -36,6 +37,11 @@
 
 	// $inspect(data);
 </script>
+
+<svelte:head>
+	<title>{personal_info.name} - {title}</title>
+	<meta name="description" content={seo} />
+</svelte:head>
 
 <Menu />
 <Header {name} {birth_date} {title} {description} {nationality} />

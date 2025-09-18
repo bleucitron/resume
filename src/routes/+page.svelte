@@ -100,11 +100,10 @@
 		<p class="name">Romain Crestey</p>
 		<p>
 			<a href="https://github.com/bleucitron" target="_blank" rel="noopener noreferrer"
-				><i class="nf nf-dev-github"></i>{github}</a
+				><i class="icon-github"></i>{github}</a
 			>
 		</p>
 		<p><a href="mailto:rcrestey@gmail.com">{email}</a></p>
-		<!-- <p><a href="tel:+33643505643">{phone_number}</a></p> -->
 		<p>{city}, {country}</p>
 	</address>
 </footer>

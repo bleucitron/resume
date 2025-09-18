@@ -1,13 +1,10 @@
 @import '@fontsource/dm-serif-display';
 @import '@fontsource/commit-mono';
-/* @import '@fontsource/jetbrains-mono'; */
-@import 'https://www.nerdfonts.com/assets/css/webfont.css';
 
-@import 'icons.css';
+@import 'icon-font.css';
 
 :root {
 	--code-font: Commit Mono, monospace;
-	/* --code-font: JetBrains Mono, monospace; */
 	--title-font: DM Serif Display, Georgia, serif;
 
 	--green: forestgreen;
@@ -51,9 +48,6 @@ body {
 	background: white;
 	font-family: var(--code-font);
 	line-height: 1.2;
-
-	/* background: var(--light-grey); */
-	/* outline: 1px dashed orange; */
 
 	@media screen and (max-width: 1024px) {
 		padding-inline: 4rem;
